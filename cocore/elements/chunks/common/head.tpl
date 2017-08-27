@@ -21,6 +21,7 @@
     <title>Altai Palace Hotel</title>
     <meta name="description">
     <meta name="copyright">
+    <base href="{$_modx->config.site_url}">
     <!-- Common CSS-->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet">
     <link href="assets/template/styles/common.css?1503259938673" rel="stylesheet">

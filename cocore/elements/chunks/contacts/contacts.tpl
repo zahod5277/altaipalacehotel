@@ -1,22 +1,8 @@
-<section class="popup__booking">
-    <div class="wrap popup__booking_wrap">
-        <h3 class="popup__booking__title">Бронирование номеров</h3>
-        <form class="popup__booking__form">
-            <div class="popup__booking__item">
-                <p class="popup__booking__item-label">Заезд</p>
-                <input type="date" class="popup__booking__item-input">
-            </div>
-            <div class="popup__booking__item">
-                <p class="popup__booking__item-label">Выезд</p>
-                <input type="date" class="popup__booking__item-input">
-            </div>
-            <input type="submit" value="Забронировать" class="popup__booking__item-button">
-        </form>
-    </div>
-</section>
 <section class="contacts-welcome">
     <div style="background-image: url('assets/template/images/image-car.jpg')" class="contacts-welcome__image"></div>
-    <div class="contacts-welcome__links"><a href="#" class="contacts-welcome__link">Партнерам</a><a href="#" class="contacts-welcome__link">Карта сайта</a>
+    <div class="contacts-welcome__links">
+        <a href="#" class="contacts-welcome__link">Партнерам</a>
+        <a href="#" class="contacts-welcome__link">Карта сайта</a>
     </div>
 </section>
 <section class="map-contacts">

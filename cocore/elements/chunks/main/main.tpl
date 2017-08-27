@@ -23,33 +23,11 @@
     </div>
 </div>
 <section class="section-slider">
-    <div class="section-slider-wrap swiper-container">
-        <div class="swiper-wrapper">
-            <div style="background-image: url('assets/template/images/slider-image1.jpg');" class="swiper-slide">
-                <div class="section-slider__button-gallery">
-                    <img src="assets/template/images/svg/slider-picture.svg">
-                    <p class="section-slider__button__text">Галерея</p>
-                </div>
-            </div>
-            <div style="background-image: url('assets/template/images/slider-image1.jpg');" class="swiper-slide">
-                <div class="section-slider__button-gallery">
-                    <img src="assets/template/images/svg/slider-picture.svg">
-                    <p class="section-slider__button__text">Галерея</p>
-                </div>
-            </div>
-            <div style="background-image: url('assets/template/images/slider-image1.jpg');" class="swiper-slide">
-                <div class="section-slider__button-gallery">
-                    <img src="assets/template/images/svg/slider-picture.svg">
-                    <p class="section-slider__button__text">Галерея</p>
-                </div>
-            </div>
-        </div>
-        <div class="section-slider__buttons__nav">
-            <img src="assets/template/images/svg/slider-arrow-left.svg" class="section-slider__buttons__nav-left">
-            <img src="assets/template/images/svg/slider-arrow-right.svg" class="section-slider__buttons__nav-right">
-        </div>
-    </div>
-    <div class="swiper-pagination"></div>
+    {$_modx->runSnippet('ms2Gallery',[
+        'tpl' => '@FILE:chunks/main/mainGallery.tpl',
+        'showLog' => 0,
+        'includeThumbs' => 'mainPage'
+    ])}
 </section>
 <section class="section-enjoy">
     <div class="wrap">
@@ -76,14 +54,18 @@
     <div class="section-tabs__slider">
         <div class="section-tabs__slide section-tabs__slide_active section-tabs__slider-swiper swiper-container">
             <div class="wrap">
+                {var $offers = $_modx->runSnippet('pdoField',[
+                    'id' => 6,
+                    'field' => 'specOffer'
+                ])}
                 <div class="section-tabs__items swiper-wrapper">
+                    {foreach $offers as $offer}
                     <div class="section-tabs__item swiper-slide">
                         <div class="section-tabs__item__wrap">
-                            <img src="assets/template/images/spec-image1.png" class="section-tabs__item__image">
+                            <img src="{$offer.image}" class="section-tabs__item__image">
                             <div class="section-tabs__item__content">
-                                <h4 class="section-tabs__item__title">Выходные со всей семьёй</h4>
-                                <p class="section-tabs__item__text">Мы приготовили для ваших детей увлекательную программу, а для вас притные скидки.</p>
-                                <p class="section-tabs__item__text">Мы приготовили для ваших детей увлекательную программу, а для вас притные скидки.</p>
+                                <h4 class="section-tabs__item__title">{$offer.title}</h4>
+                                <p class="section-tabs__item__text">{$offer.descr}</p>
                                 <div class="section-tabs__item__button-wrap">
                                     <div class="section-tabs__item__button">Заказать</div>
                                     <div class="section-tabs__item__action">Предложение действительно до 31 декабря 2017.</div>
@@ -91,48 +73,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="section-tabs__item swiper-slide">
-                        <div class="section-tabs__item__wrap">
-                            <img src="assets/template/images/spec-image2.png" class="section-tabs__item__image">
-                            <div class="section-tabs__item__content">
-                                <h4 class="section-tabs__item__title">Выходные со всей семьёй</h4>
-                                <p class="section-tabs__item__text">Мы приготовили для ваших детей увлекательную программу, а для вас притные скидки.</p>
-                                <p class="section-tabs__item__text">Мы приготовили для ваших детей увлекательную программу, а для вас притные скидки.</p>
-                                <div class="section-tabs__item__button-wrap">
-                                    <div class="section-tabs__item__button">Заказать</div>
-                                    <div class="section-tabs__item__action">Предложение действительно до 31 декабря 2017.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-tabs__item swiper-slide">
-                        <div class="section-tabs__item__wrap">
-                            <img src="assets/template/images/spec-image1.png" class="section-tabs__item__image">
-                            <div class="section-tabs__item__content">
-                                <h4 class="section-tabs__item__title">Выходные со всей семьёй</h4>
-                                <p class="section-tabs__item__text">Мы приготовили для ваших детей увлекательную программу, а для вас притные скидки.</p>
-                                <p class="section-tabs__item__text">Мы приготовили для ваших детей увлекательную программу, а для вас притные скидки.</p>
-                                <div class="section-tabs__item__button-wrap">
-                                    <div class="section-tabs__item__button">Заказать</div>
-                                    <div class="section-tabs__item__action">Предложение действительно до 31 декабря 2017.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="section-tabs__item swiper-slide">
-                        <div class="section-tabs__item__wrap">
-                            <img src="assets/template/images/spec-image1.png" class="section-tabs__item__image">
-                            <div class="section-tabs__item__content">
-                                <h4 class="section-tabs__item__title">Выходные со всей семьёй</h4>
-                                <p class="section-tabs__item__text">Мы приготовили для ваших детей увлекательную программу, а для вас притные скидки.</p>
-                                <p class="section-tabs__item__text">Мы приготовили для ваших детей увлекательную программу, а для вас притные скидки.</p>
-                                <div class="section-tabs__item__button-wrap">
-                                    <div class="section-tabs__item__button">Заказать</div>
-                                    <div class="section-tabs__item__action">Предложение действительно до 31 декабря 2017.</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    {/foreach}
                 </div>
             </div>
         </div>
@@ -165,7 +106,10 @@
                                 </section>
                             </article>
                         </div>
-                        <h5 class="section-tabs__slide__clock-title section-tabs__slide__clock-weather">22 сентября +19 °C</h5>
+                        {$_modx->runSnippet('@FILE:snippets/getWeather.php',[
+                            'city' => 11319,
+                            'tpl' => '@FILE:chunks/common/weather.tpl'
+                        ])}
                         <div class="section-tabs__slide__clock-weather_mobile">
                             <img src="assets/template/images/svg/icon-weather-big.svg" class="section-tabs__slide__clock-weather_image">
                             <div class="section-tabs__slide__clock-weather_text">+19 °C</div>
@@ -225,7 +169,9 @@
                     </div>
                 </div>
             </div>
-            <div id="slide-map"></div>
+            <div id="slide-map">
+                <div id="map" style="width: 100%; height: 450px" class="map"><ymaps class="ymaps-2-1-55-map" style="width: 1349px; height: 450px;"><ymaps class="ymaps-2-1-55-map ymaps-2-1-55-i-ua_js_yes ymaps-2-1-55-map-bg-ru ymaps-2-1-55-islets_map-lang-ru" style="width: 1349px; height: 450px;"><ymaps class="ymaps-2-1-55-inner-panes"><ymaps class="ymaps-2-1-55-events-pane ymaps-2-1-55-user-selection-none" unselectable="on" style="height: 100%; width: 100%; top: 0px; left: 0px; position: absolute; z-index: 2500; cursor: url(&quot;https://api-maps.yandex.ru/2.1.55/build/release/images/util_cursor_storage_grab.cur&quot;) 16 16, url(&quot;https://api-maps.yandex.ru/2.1.55/build/release/images/util_cursor_storage_grab.cur&quot;), move;"></ymaps><ymaps class="ymaps-2-1-55-ground-pane" style="top: 0px; left: 0px; position: absolute; transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 501; transition-timing-function: linear;"><ymaps style="position: absolute; z-index: 150;"><canvas height="706" width="1605" style="position: absolute; width: 1605px; height: 706px; left: -128px; top: -128px;"></canvas></ymaps></ymaps><ymaps class="ymaps-2-1-55-copyrights-pane" style="height: 0px; bottom: 5px; right: 3px; top: auto; left: 10px; position: absolute; z-index: 5002;"><ymaps><ymaps class="ymaps-2-1-55-copyright ymaps-2-1-55-copyright_logo_no" style=""><ymaps class="ymaps-2-1-55-copyright__fog">…</ymaps><ymaps class="ymaps-2-1-55-copyright__wrap"><ymaps class="ymaps-2-1-55-copyright__layout"><ymaps class="ymaps-2-1-55-copyright__content-cell"><ymaps class="ymaps-2-1-55-copyright__content"><ymaps class="ymaps-2-1-55-copyright__text">© Яндекс</ymaps><ymaps class="ymaps-2-1-55-copyright__agreement">&nbsp;<a class="ymaps-2-1-55-copyright__link" target="_blank" href="https://yandex.ru/legal/maps_termsofuse/?lang=ru">Условия использования</a></ymaps></ymaps></ymaps><ymaps class="ymaps-2-1-55-copyright__logo-cell"><a class="ymaps-2-1-55-copyright__logo" href="" target="_blank"></a></ymaps></ymaps></ymaps></ymaps></ymaps><ymaps class="ymaps-2-1-55-map-copyrights-promo"><iframe src="https://api-maps.yandex.ru/services/inception/?lang=ru_RU&amp;iframe_id=9580&amp;url=%2Fmap&amp;api_version=2.1.55&amp;mode=release&amp;referer_host=altaipalace.ru&amp;data=%7B%22mapState%22%3A%7B%22origin%22%3A%22jsapi_2_1_55%22%2C%22source%22%3A%22api-maps%22%2C%22from%22%3A%22api-maps%22%2C%22host%22%3A%22altaipalace.ru%22%7D%2C%22options%22%3A%7B%22padding%22%3A%220%200%2010px%2010px%22%7D%2C%22availWidth%22%3A1130%7D" width="124" height="34" scrolling="no" frameborder="0" style="overflow: hidden;"></iframe></ymaps></ymaps><ymaps class="ymaps-2-1-55-controls-pane" style="width: 100%; top: 0px; left: 0px; position: absolute; z-index: 4503;"><ymaps class="ymaps-2-1-55-controls__toolbar" style="margin-top: 10px;"><ymaps class="ymaps-2-1-55-controls__toolbar_left"></ymaps><ymaps class="ymaps-2-1-55-controls__toolbar_right"></ymaps></ymaps><ymaps class="ymaps-2-1-55-controls__bottom" style="top: 450px;"></ymaps></ymaps><ymaps class="ymaps-2-1-55-places-pane" style="top: 0px; left: 0px; position: absolute; transition-duration: 0ms; transform: translate3d(0px, 0px, 0px) scale(1, 1); z-index: 2004; transition-timing-function: linear;"><ymaps class="ymaps-2-1-55-placemark-overlay ymaps-2-1-55-user-selection-none" unselectable="on" style="z-index: 650; height: 0px; width: 0px; position: absolute; left: 885px; top: 135px;"><ymaps><ymaps class="ymaps-2-1-55-image " style="position: absolute; left: -3px; top: -42px; width: 43px; height: 38px; opacity: 1; background-position: 0px 0px; background-size: 43px 38px; background-image: url(&quot;http://altaipalace.ru/wp-content/themes/AltaiPalce/images/Pin.png&quot;);"></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></ymaps></div>
+            </div>
         </div>
     </div>
 </section>

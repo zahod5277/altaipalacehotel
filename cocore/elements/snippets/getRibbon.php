@@ -4,7 +4,7 @@
 //если в кэше ничего не лежит, то запускаем скрипт
 if (!$data = $modx->cacheManager->get('newsbelt')) {
 //настройка параметров
-require_once('twitter/TwitterAPIExchange.php');
+require_once(MODX_CORE_PATH . 'components/twitter/TwitterAPIExchange.php');
 
 $pdo = $modx->getService('pdoTools');
 
