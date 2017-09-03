@@ -1,0 +1,1 @@
+<div class="section-tabs__slide__clock-weather_text">{$weather.fact.temp}} °C</div>

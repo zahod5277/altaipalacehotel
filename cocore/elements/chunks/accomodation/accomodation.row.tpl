@@ -1,16 +1,10 @@
-<section class="accomodation-welcome">
-    <div class="wrap">
-        <h1 class="accomodation-welcome__title">Настоящие <div class="accomodation-welcome__title__stars">★★★★</div></h1>
-        {include 'file:chunks/accomodation/accomodationAdvantages.tpl'}
-    </div>
-</section>
 <section class="accomodation-basic accomodation-lux">
     <div class="wrap">
-        <h2 class="section__title">{$_modx->resource.pagetitle}</h2>
+        <h2 class="section__title">{$pagetitle}</h2>
         <div class="accomodation-basic-wrap swiper-container">
             <div class="swiper-wrapper">
                 {$_modx->runSnippet('ms2Gallery',[
-                    'resources' => $_modx->resource.id,
+                    'resources' => $id,
                     'tpl' => '@FILE:chunks/accomodation/accomodation.gallery.tpl'
                 ])}
             </div>
@@ -23,28 +17,27 @@
             <div class="accomodation-basic__options">
                 <div class="accomodation-basic__option">
                     <div class="accomodation-basic__option__title">Площадь номера</div>
-                    <div class="accomodation-basic__option__value">{$_modx->resource.areaof}</div>
+                    <div class="accomodation-basic__option__value">{$_pls['tv.areaof']}</div>
                 </div>
                 <div class="accomodation-basic__option">
                     <div class="accomodation-basic__option__title">Количество спальных мест</div>
-                    <div class="accomodation-basic__option__value">{$_modx->resource.guests}</div>
+                    <div class="accomodation-basic__option__value">{$_pls['tv.guests']}</div>
                 </div>
                 <div class="accomodation-basic__option">
                     <div class="accomodation-basic__option__title">Планировка</div>
-                    <div class="accomodation-basic__option__value">{$_modx->resource.layout}</div>
+                    <div class="accomodation-basic__option__value">{$_pls['tv.layout']}</div>
                 </div>
             </div>
         </div>
         <div class="accomodation-basic__main-wrap">
-            <p class="accomodation-basic__main-text">{$_modx->resource.introtext}</p>
+            <p class="accomodation-basic__main-text">{$introtext}</p>
             <div class="accomodation-basic__price">
                 {$_modx->getChunk('@FILE:chunks/accomodation/booking.btn.tpl',[
-                    'price' => $_modx->resource.price,
-                    'bookingID' => $_modx->resource.bookingID,
-                    'resource' => $_modx->resource.id
+                    'price' => $_pls['tv.price'],
+                    'bookingID' => $_pls['tv.bookingID']
                 ])}
                 {$_modx->runSnippet('@FILE:snippets/getShareLinks.php',[
-                    'resource' => $_modx->resource.id,
+                    'resource' => $id,
                     'tpl' => '@FILE:chunks/accomodation.share.tpl'
                 ])}
             </div>

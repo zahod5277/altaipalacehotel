@@ -1,8 +1,8 @@
 <section class="section-breadcrums">
     <div class="wrap">
-        <a href="#" class="section-breadcrums__item section-breadcrums__item_active">Все вместе</a>
-        <a href="#" class="section-breadcrums__item">Горячие предложения</a>
-        <a href="#" class="section-breadcrums__item">Долгосрочные</a>
+        <a href="#all" class="section-breadcrums__item section-breadcrums__item_active">Все вместе</a>
+        <a href="#hot" class="section-breadcrums__item">Горячие предложения</a>
+        <a href="#usual" class="section-breadcrums__item">Долгосрочные</a>
     </div>
 </section>
 {var $offers = $_modx->resource.specOffer|fromJSON}

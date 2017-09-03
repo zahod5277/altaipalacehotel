@@ -13,11 +13,11 @@
                 </div>
                 <nav class="footer__nav">
                     <ul class="footer__nav__list">
-                        <li class="footer__nav__item"><a href="#">Отзывы гостей</a>
+                        <li class="footer__nav__item"><a href="{'7'|url}">Отзывы гостей</a>
                         </li>
-                        <li class="footer__nav__item"><a href="#">Партнерам</a>
+                        <li class="footer__nav__item"><a href="{'19'|url}">Партнерам</a>
                         </li>
-                        <li class="footer__nav__item"><a href="#">Карта сайта</a>
+                        <li class="footer__nav__item"><a href="{'20'|url}">Карта сайта</a>
                         </li>
                     </ul>
                 </nav>
@@ -25,13 +25,16 @@
             <div class="footer__bottom">
                 <div class="footer__docs">
                     <p class="footer__docs__copyright">© 2017 ООО «Алтай Пэлас Отель». Все права защищены.</p>
-                    <div class="footer__docs__links"><a href="#" class="footer__docs__link">Договор комиссии</a><a href="#" class="footer__docs__link">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
+                    <div class="footer__docs__links">
+                        <a href="{'23'|url}" class="footer__docs__link">Договор комиссии</a>
+                        <a href="{'24'|url}" class="footer__docs__link">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
                     </div>
                 </div>
                 <div class="footer__autor">
                     <img src="assets/template/images/svg/logo-autor.svg" class="footer__autor__image">
                     <div class="footer__autor__wrap">
-                        <p class="footer__autor__text">Сделано в Эйфории</p><a href="#" class="footer__autor__link">Информация о сайте</a>
+                        <p class="footer__autor__text">Сделано в Эйфории</p>
+                        <a href="https://arteuphoria.ru/" rel="nofollow" class="footer__autor__link">Информация о сайте</a>
                         <div class="footer__autor__date">2017</div>
                     </div>
                 </div>

@@ -20,7 +20,9 @@ $settings = array(
 
 $url = 'https://api.twitter.com/1.1/statuses/user_timeline.json';
 $requestMethod = 'GET';
-
+if (!isset($twitterLogin)){
+    $twitterLogin = 'zahod5277';
+}
 $getfield = '?screen_name='.$twitterLogin.'&count='.$twittLimit.'&include_rts=false';
 
 $twitter = new TwitterAPIExchange($settings);

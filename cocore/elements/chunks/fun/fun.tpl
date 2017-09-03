@@ -2,69 +2,15 @@
     <h1>отдых на любой вкус</h1>
 </section>
 <section class="fun-info">
-    <div class="fun-info-block">
-        <div class="fun-info__item">
-            <div class="fun-info__content fun-info__content_1"></div>
-            <h2 class="fun-info__title">Караоке</h2>
-        </div>
-        <div class="fun-info__article">
-            <div class="wrap">
-                <h2 class="fun-info__subtitle">Подзагаловок</h2>
-                <p class="fun-info__description">Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis
-                    mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante,
-                    eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla
-                    nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.</p>
-                <div class="fun-info__row">
-                    <img src="assets/images/desc-item-1.jpg">
-                    <img src="assets/images/desc-item-2.png">
-                    <img src="assets/images/desc-item-3.png">
-                    <img src="assets/images/desc-item-4.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fun-info-block">
-        <div class="fun-info__item">
-            <div class="fun-info__content fun-info__content_2"></div>
-            <h2 class="fun-info__title">СПА-салон</h2>
-        </div>
-        <div class="fun-info__article">
-            <div class="wrap">
-                <h2 class="fun-info__subtitle">Подзагаловок</h2>
-                <p class="fun-info__description">Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis
-                    mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante,
-                    eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla
-                    nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.</p>
-                <div class="fun-info__row">
-                    <img src="assets/images/desc-item-1.jpg">
-                    <img src="assets/images/desc-item-2.png">
-                    <img src="assets/images/desc-item-3.png">
-                    <img src="assets/images/desc-item-4.png">
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="fun-info-block">
-        <div class="fun-info__item">
-            <div class="fun-info__content fun-info__content_3"></div>
-            <h2 class="fun-info__title">Бильярд</h2>
-        </div>
-        <div class="fun-info__article">
-            <div class="wrap">
-                <h2 class="fun-info__subtitle">Подзагаловок</h2>
-                <p class="fun-info__description">Lorem ipsum dolor sit amet consectetur adipiscing elit, urna consequat felis vehicula class ultricies mollis dictumst, aenean non a in donec nulla. Phasellus ante pellentesque erat cum risus consequat imperdiet aliquam, integer placerat et turpis
-                    mi eros nec lobortis taciti, vehicula nisl litora tellus ligula porttitor metus. Vivamus integer non suscipit taciti mus etiam at primis tempor sagittis sit, euismod libero facilisi aptent elementum felis blandit cursus gravida sociis erat ante,
-                    eleifend lectus nullam dapibus netus feugiat curae curabitur est ad. Massa curae fringilla porttitor quam sollicitudin iaculis aptent leo ligula euismod dictumst, orci penatibus mauris eros etiam praesent erat volutpat posuere hac. Metus fringilla
-                    nec ullamcorper odio aliquam lacinia conubia mauris tempor, etiam ultricies proin quisque lectus sociis id tristique, integer phasellus taciti pretium adipiscing tortor sagittis ligula.</p>
-                <div class="fun-info__row">
-                    <img src="assets/images/desc-item-1.jpg">
-                    <img src="assets/images/desc-item-2.png">
-                    <img src="assets/images/desc-item-3.png">
-                    <img src="assets/images/desc-item-4.png">
-                </div>
-            </div>
-        </div>
-    </div>
+    {$_modx->runSnippet('ms2GalleryResources',[
+        'parents' => $_modx->resource.id,
+        'typeOfJoin' => 'inner',
+        'includeTVs' => 'ico',
+        'includeThumbs' => 'small,wide',
+        'includeOriginal' => 1,
+        'showLog' => 0,
+        'tpl' => '@FILE:chunks/fun/fun.row.tpl'
+    ])}
 </section>
 <section class="section-title section-title_bottom mobile-show">
     <h2>отдых на любой вкус</h2>
@@ -81,10 +27,11 @@
     </div>
 </section>
 <div id="myCanvasContainer" class="tags-container">
-    <canvas id="myCanvas" width="768" height="400" class="desktop-show">
+    <!--canvas#myCanvas.desktop-show(width='auto', height='auto')-->
+    <canvas id="myCanvas" class="desktop-show" width="1349" height="800" style="">
         <p>Anything in here will be replaced on browsers that support the canvas element</p>
     </canvas>
-    <div id="tags">
+    <div id="tags" style="display: none;">
         <ul>
             <li><a href="#">Тайны священной долины</a>
             </li>

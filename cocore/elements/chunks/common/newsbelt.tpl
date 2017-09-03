@@ -4,17 +4,37 @@
             <p class="section-newsbelt__item__hash">#altaipalacehotel</p>
             <h3 class="section-newsbelt__item__title">Присоединяйтесь<span><br> к Алтай Пэлас</span></h3>
             <div class="section-newsbelt__item__social">
-                <img src="assets/template/images/svg/icon-vk.svg" class="section-newsbelt__item__social-icon">
-                <img src="assets/template/images/svg/icon-fb.svg" class="section-newsbelt__item__social-icon">
-                <img src="assets/template/images/svg/icon-twitter.svg" class="section-newsbelt__item__social-icon">
-                <img src="assets/template/images/svg/icon-insta.svg" class="section-newsbelt__item__social-icon">
-                <img src="assets/template/images/svg/icon-youtube.svg" class="section-newsbelt__item__social-icon">
+                {if $_modx->config.vkLink?}
+                    <a href="{$_modx->config.vkLink}">
+                        <img src="assets/template/images/svg/icon-vk.svg" class="section-newsbelt__item__social-icon">
+                    </a>
+                {/if}
+                {if $_modx->config.facebookLink?}
+                    <a href="{$_modx->config.facebookLink}">
+                        <img src="assets/template/images/svg/icon-fb.svg" class="section-newsbelt__item__social-icon">
+                    </a>
+                {/if}
+                {if $_modx->config.twitterLink?}
+                    <a href="{$_modx->config.twitterLink}">
+                        <img src="assets/template/images/svg/icon-twitter.svg" class="section-newsbelt__item__social-icon">
+                    </a>
+                {/if}
+                {if $_modx->config.instagramLink?}
+                    <a href="https://www.instagram.com/{$_modx->config.instagramLink}">
+                        <img src="assets/template/images/svg/icon-insta.svg" class="section-newsbelt__item__social-icon">
+                    </a>
+                {/if}
+                {if $_modx->config.youtubeLink?}
+                    <a href="{$_modx->config.youtubeLink}">
+                        <img src="assets/template/images/svg/icon-youtube.svg" class="section-newsbelt__item__social-icon">
+                    </a>
+                {/if}
             </div>
         </div>
         {$_modx->runSnippet('@FILE:snippets/getRibbon.php',[
-            'instaLimit' => 4,
-            'instaLogin' => 'zahod5277',
-            'twitterLogin' => 'zahod5277',
+            'instaLimit' => 3,
+            'instaLogin' => $_modx->config.instagramLink,
+            'twitterLogin' => $_modx->config.twiiterLink,
             'twittLimit' => 2,
             'tpl' => '@FILE:chunks/common/newsbelt.row.tpl'
        ])}

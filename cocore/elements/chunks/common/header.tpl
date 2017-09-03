@@ -23,12 +23,13 @@
                 <img src="assets/template/images/svg/logo.svg" class="header__logo">
             {/if}
             <div class="header__contacts">
-                <a href="tel: +7 (963) 512-52-72" class="header__contact">
+                {var $phones = $_modx->config.headerNumber|split}
+                <a href="tel:{$phones[0]}" class="header__contact">
                     <img src="assets/template/images/svg/telephone.svg" class="header__contact__icon">
-                    <div class="header__contact__text">+7 (800) 444-15-13</div>
+                    <div class="header__contact__text">{$phones[0]}</div>
                 </a>
-                <a href="tel: +7 (963) 512-52-72" class="header__contact">
-                    <div class="header__contact__text">+7 (963) 512-52-72</div>
+                <a href="tel:{$phones[1]}" class="header__contact">
+                    <div class="header__contact__text">{$phones[1]}</div>
                 </a>
             </div>
             <img src="assets/template/images/svg/calendar.svg" class="header__mobile__calendar">
