@@ -65,5 +65,5 @@ foreach ($links as $key => $params){
     $links[$key]['generatedUrl'] = $params['sharelink'].http_build_query($params['params']);
     $pls[$key] = $links[$key]['generatedUrl'];
 }
-$output = $pdo->getChunk('@FILE:chunks/accomodation/accomodation.share.tpl',$pls);
+$output = $pdo->getChunk($tpl,$pls);
 return $output;

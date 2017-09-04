@@ -7,6 +7,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.3.0/moment-timezone.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.3.0/moment-timezone-utils.min.js"></script>
 <script src="assets/template/scripts/sticky.js"></script>
+
+<script src="assets/template/scripts/libs/combodate/moment.js"></script>
+<script src="assets/template/scripts/libs/combodate/combodate.js"></script>
+
 <script src="assets/template/scripts/libs/fancybox/jquery.fancybox.min.js"></script>
 <script src="assets/template/scripts/tagcanvas.js"></script>
 <script src="assets/template/scripts/front-clock.js"></script>

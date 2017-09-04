@@ -79,46 +79,10 @@
         </div>
         <div style="background-image:url('assets/template/images/front-image-tab-1.jpg')" class="section-tabs__slide">
             <div class="wrap">
-                <div class="section-tabs__slide__clock">
-                    <h5 class="section-tabs__slide__clock-title_mobile">Сейчас на Алтае {'%d %B'|date}</h5>
-                    <div class="section-tabs__slide__clock-wrap">
-                        <h5 class="section-tabs__slide__clock-title">Сейчас на Алтае</h5>
-                        <div class="demo-container clocks active bounce">
-                            <article class="clock ios7 simple station js-london">
-                                <div class="clock__paths">
-                                    <div class="clock__path"></div>
-                                    <div class="clock__path"></div>
-                                    <div class="clock__path"></div>
-                                    <div class="clock__path"></div>
-                                    <div class="clock__path"></div>
-                                    <div class="clock__path"></div>
-                                    <div class="clock__path"></div>
-                                    <div class="clock__path"></div>
-                                </div>
-                                <section class="hours-container">
-                                    <section class="hours"></section>
-                                </section>
-                                <section class="minutes-container">
-                                    <section class="minutes"></section>
-                                </section>
-                                <section class="seconds-container">
-                                    <section class="seconds"></section>
-                                </section>
-                            </article>
-                        </div>
-                        {$_modx->runSnippet('@FILE:snippets/getWeather.php',[
-                            'city' => 11319,
-                            'tpl' => '@FILE:chunks/common/weather.tpl'
-                        ])}
-                        <div class="section-tabs__slide__clock-weather_mobile">
-                            <img src="assets/template/images/svg/icon-weather-big.svg" class="section-tabs__slide__clock-weather_image">
-                            {$_modx->runSnippet('@FILE:snippets/getWeather.php',[
-                                'city' => 11319,
-                                'tpl' => '@FILE:chunks/common/mobileWeather.tpl'
-                            ])}
-                        </div>
-                    </div>
-                </div>
+                {$_modx->runSnippet('@FILE:snippets/getWeather.php',[
+                    'city' => 11319,
+                    'tpl' => '@FILE:chunks/common/weather.tpl'
+                ])}
                 <div class="section-tabs__slide__content">
                     <h3 class="section-tabs__slide__title">Арт-отель</h3>
                     <p class="section-tabs__slide__text">Развлекательный комплекс Altai Palace – это особенное место, в котором атмосфера роскоши и азарта сочетается с высоким уровнем комфорта и живописной природой Алтайского края.</p>
