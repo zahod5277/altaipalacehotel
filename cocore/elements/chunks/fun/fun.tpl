@@ -15,14 +15,21 @@
 <section class="section-title section-title_bottom mobile-show">
     <h2>отдых на любой вкус</h2>
 </section>
+{var $tags = $_modx->resource.funItems|fromJSON}
 <section class="section-tabs mobile-show">
     <div class="wrap wrap-pagination">
-        <img src="assets/images/svg/icon-slider-open.svg">
+        <img src="assets/template/images/svg/icon-slider-open.svg">
         <div class="section-tabs-pagination">
-            <div class="section-tabs-bullet section-tabs-bullet_active">Уникальные предложения</div>
-            <div class="section-tabs-bullet">Узнайте о нас больше</div>
-            <div class="section-tabs-bullet">Отдых без границ</div>
-            <div class="section-tabs-bullet">Как добраться</div>
+            {var $i = 0}
+            {foreach $tags as $tag}
+                {if $i == 0}
+                    {var $class = ' section-tabs-bullet_active'}
+                {else}
+                    {var $class = ''}    
+                {/if}
+                <div class="section-tabs-bullet{$class}">{$tag.title}</div>
+                {var $i = $i+1}
+            {/foreach}
         </div>
     </div>
 </section>
@@ -33,18 +40,19 @@
     </canvas>
     <div id="tags" style="display: none;">
         <ul>
-            <li><a href="#">Тайны священной долины</a>
-            </li>
-            <li><a href="#">Озеро Манжерок</a>
-            </li>
-            <li><a href="#">Гора «Чертов палец»</a>
-            </li>
-            <li><a href="#">Каракольские озера</a>
-            </li>
-            <li><a href="#">Телецкое озеро</a>
-            </li>
-            <li><a href="#">Город-курорт Белокуриха</a>
-            </li>
+            {foreach $tags as $tag}
+                <li>
+                    <a href="#" data-tag="{$tag.MIGX_id}">{$tag.title}</a>
+                </li>
+            {/foreach}
         </ul>
+    </div>
+    <div class="tags-container__overlay">
+        <div class="tags-container__content">
+            <div class="tags-container__title">Озеро Манжерок</div>
+            <div class="tags-container__article">Бывает ли тур по Алтаю без экстрима и палаток? Да! Отправляйтесь в недельное путешествие по знаковым местам Алтая с ночёвкой на турбазах и этнографических стоянках. Однозначно лучший тур для первого раза на Алтае.
+                <div class="tags-container__bottom">Для начинающих</div>
+            </div>
+        </div>
     </div>
 </div>

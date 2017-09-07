@@ -10,9 +10,13 @@
     <div class="wrap">
         <div class="section-spec__items">
             {foreach $offers as $offer}
+                {var $image = $_modx->runSnippet('phpthumbon',[
+                    'input' => $offer.image,
+                    'options' => 'w=240&h=180&zc=1&q=85'
+                ])}
                 <div class="section-spec__item" data-type="{$offer.type}">
                     <div class="section-spec__item__wrap">
-                        <img src="{$offer.image}" class="section-spec__item__image">
+                        <img src="{$image}" class="section-spec__item__image">
                         <div class="section-spec__item__content">
                             <h4 class="section-spec__item__title">{$offer.title}</h4>
                             <p class="section-spec__item__text">

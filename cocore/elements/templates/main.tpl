@@ -17,5 +17,4 @@
     <script src="assets/template/scripts/front-clock.js"></script>
     
     <script src="assets/template/scripts/main.js"></script>
-    <script src="assets/template/scripts/contacts.js"></script>
 {/block}

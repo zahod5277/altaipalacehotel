@@ -15,7 +15,7 @@
                     </a>
                 {/if}
                 {if $_modx->config.twitterLink?}
-                    <a href="{$_modx->config.twitterLink}">
+                    <a href="https://twitter.com/{$_modx->config.twitterLink}">
                         <img src="assets/template/images/svg/icon-twitter.svg" class="section-newsbelt__item__social-icon">
                     </a>
                 {/if}
@@ -34,8 +34,8 @@
         {$_modx->runSnippet('@FILE:snippets/getRibbon.php',[
             'instaLimit' => 3,
             'instaLogin' => $_modx->config.instagramLink,
-            'twitterLogin' => $_modx->config.twiiterLink,
-            'twittLimit' => 2,
+            'twitterLogin' => $_modx->config.twitterLink,
+            'twittLimit' => 1,
             'tpl' => '@FILE:chunks/common/newsbelt.row.tpl'
        ])}
     </div>

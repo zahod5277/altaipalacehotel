@@ -1,0 +1,66 @@
+section.welcome{
+    height: calc(100vh - 153px)!important;
+    margin-top: 0px;
+}
+
+.img-responsive{
+    min-width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+}
+
+.gallery__row_fourth .gallery__col{
+    overflow: hidden;
+}
+
+.textHeading{
+    font-size: 40px;
+    margin: 20px 0px;
+}
+
+.textcontent{
+    font-size: 16px;
+    line-height: 24px;
+    font-family: 'Myriad Pro', sans-serif
+}
+
+.textcontent ul {
+    list-style: disc;
+    padding-left: 40px;
+}
+
+.textcontent ul li a{
+    color: #000;
+    text-decoration: underline;
+}
+
+.form-control{
+    padding: 5px;
+    border: black 1px solid;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.btn{
+    color:white;
+    padding: 10px 15px;
+    background: black;
+    border:none;
+    text-align: center;
+}
+
+.accomodation-basic__price__button a{
+    color:white;
+}
+
+@media(min-width:968px) and (max-width:1400px){
+    .popup__spec__form-wrap input{
+        font-size: 16px!important;
+        height: 34px!important;
+    }
+    .popup__spec__input_text-area{
+        height: 8vh!important;
+        font-size: 16px!important;
+    }
+}

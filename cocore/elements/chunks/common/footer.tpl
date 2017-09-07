@@ -26,7 +26,7 @@
                 <div class="footer__docs">
                     <p class="footer__docs__copyright">© 2017 ООО «Алтай Пэлас Отель». Все права защищены.</p>
                     <div class="footer__docs__links">
-                        <a href="{'23'|url}" class="footer__docs__link">Договор комиссии</a>
+                        <a href="files/Commission_agreement.doc" class="footer__docs__link">Договор комиссии</a>
                         <a href="{'24'|url}" class="footer__docs__link">ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</a>
                     </div>
                 </div>

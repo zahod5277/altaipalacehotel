@@ -19,7 +19,9 @@
 <div class="welcome__info">
     <div class="wrap">
         <img src="assets/template/images/svg/icon-dish.svg" class="welcome__info__icon">
-        <div class="welcome__info__text">Служба бронирования: {$_modx->config.reservePhone} | {$_modx->config.reserveMail}</div>
+        <div class="welcome__info__text">
+            <p>Служба бронирования: <span class="phone">{$_modx->config.reservePhone}</span> {$_modx->config.reserveMail}</p>
+        </div>
     </div>
 </div>
 <section class="section-slider">
@@ -60,15 +62,19 @@
                 ])}
                 <div class="section-tabs__items swiper-wrapper">
                     {foreach $offers as $offer}
+                        {var $image = $_modx->runSnippet('phpthumbon',[
+                    'input' => $offer.image,
+                    'options' => 'w=240&h=180&zc=1&q=85'
+                ])}
                     <div class="section-tabs__item swiper-slide">
                         <div class="section-tabs__item__wrap">
-                            <img src="{$offer.image}" class="section-tabs__item__image">
+                            <img src="{$image}" class="section-tabs__item__image">
                             <div class="section-tabs__item__content">
                                 <h4 class="section-tabs__item__title">{$offer.title}</h4>
                                 <p class="section-tabs__item__text">{$offer.descr}</p>
                                 <div class="section-tabs__item__button-wrap">
                                     <div class="section-tabs__item__button">Заказать</div>
-                                    <div class="section-tabs__item__action">Предложение действительно до 31 декабря 2017.</div>
+                                    <div class="section-tabs__item__action">{$offer.dateUntil}</div>
                                 </div>
                             </div>
                         </div>

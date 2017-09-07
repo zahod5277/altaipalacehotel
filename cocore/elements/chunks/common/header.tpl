@@ -46,6 +46,7 @@
     ])}
     {$_modx->runSnippet('pdoMenu',[
         'parents' => 0,
+        'resources' => -1,
         'level' => 1,
         'tplOuter' => '@FILE:chunks/common/mobileMenu.outer.tpl',
         'tpl' => '@FILE:chunks/common/mobileMenu.row.tpl'

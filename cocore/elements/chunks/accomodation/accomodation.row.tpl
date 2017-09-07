@@ -38,7 +38,7 @@
                 ])}
                 {$_modx->runSnippet('@FILE:snippets/getShareLinks.php',[
                     'resource' => $id,
-                    'tpl' => '@FILE:chunks/accomodation.share.tpl'
+                    'tpl' => '@FILE:chunks/accomodation/accomodation.share.tpl'
                 ])}
             </div>
         </div>

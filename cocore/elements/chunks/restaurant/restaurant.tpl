@@ -1,3 +1,18 @@
+{include 'file:chunks/restaurant/slider.tpl'}
+
+{$_modx->runSnippet('!AjaxForm',[
+    'snippet' => 'FormIt',
+    'form' => '@FILE:chunks/forms/reserve.table.tpl',
+    'hooks' => 'spam,email,FormItSaveForm',
+    'emailSubject' => 'Бронь столика в ресторане',
+    'emailTo' => $_modx->config.form_email,
+    'emailFrom' => $_modx->config.emailsender,
+    'emailTpl' => 'reserve.table.email.tpl'
+    'validate' => 'name:required',
+    'validationErrorMessage' => '<h5>В форме содержатся ошибки!</h5>',
+    'successMessage' => '<h5>Бронь успешно отправлена. Скоро с вами свяжется менеджер для подтверждения бронирования.</h5>'
+])}
+
 <div class="box-shadow-top">
     <section class="wrap">
         <div class="m-about">
