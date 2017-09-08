@@ -1,8 +1,8 @@
 <section class="section-breadcrums">
     <div class="wrap">
-        <a href="#all" class="section-breadcrums__item section-breadcrums__item_active">Все вместе</a>
-        <a href="#hot" class="section-breadcrums__item">Горячие предложения</a>
-        <a href="#usual" class="section-breadcrums__item">Долгосрочные</a>
+        <a href="#" data-breadcrumb="all" class="section-breadcrums__item section-breadcrums__item_active">Все вместе</a>
+        <a href="#" data-breadcrumb="hot" class="section-breadcrums__item">Горячие предложения</a>
+        <a href="#" data-breadcrumb="usual" class="section-breadcrums__item">Долгосрочные</a>
     </div>
 </section>
 {var $offers = $_modx->resource.specOffer|fromJSON}
@@ -14,16 +14,16 @@
                     'input' => $offer.image,
                     'options' => 'w=240&h=180&zc=1&q=85'
                 ])}
-                <div class="section-spec__item" data-type="{$offer.type}">
+                <div class="section-spec__item spec-item" data-spec="{$offer.type}">
                     <div class="section-spec__item__wrap">
                         <img src="{$image}" class="section-spec__item__image">
                         <div class="section-spec__item__content">
-                            <h4 class="section-spec__item__title">{$offer.title}</h4>
+                            <h4 class="section-spec__item__title spec-order-title">{$offer.title}</h4>
                             <p class="section-spec__item__text">
                                 {$offer.descr}
                             </p>
                             <div class="section-spec__item__button-wrap">
-                                <div class="section-spec__item__button">Заказать</div>
+                                <div class="section-spec__item__button spec-order-btn">Заказать</div>
                                 <div class="section-spec__item__action">{$offer.dateUntil}</div>
                             </div>
                         </div>

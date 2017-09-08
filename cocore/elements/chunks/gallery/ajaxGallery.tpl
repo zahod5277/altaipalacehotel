@@ -10,7 +10,7 @@
                 'tpl' => '@FILE:chunks/gallery/gallery.row.tpl',
                 'resources' => $gallery,
                 'offset' => 9,
-                'limit' => 8,
+                'limit' => 12,
                 'ajax' => 1,
                 'setMeta' => 1,
                 'ajaxMode' => 'button',

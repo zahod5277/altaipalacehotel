@@ -3,10 +3,10 @@
         <ul class="header__mobile__menu-items">
             {$wrapper}
             <div class="header__mobile__buttons">
-                <div class="header__mobile__button-wrap">
+                <div class="header__mobile__button-wrap map-trigger">
                     <img src="assets/template/images/svg/mobile-marker-map.svg" class="header__mobile__button">
                 </div>
-                <div class="header__mobile__button-wrap">
+                <div class="header__mobile__button-wrap tour-trigger">
                     <img src="assets/template/images/svg/mobile-icon-picture.svg" class="header__mobile__button">
                 </div>
                 <a href="tel: +7 (963) 512-52-72" class="header__mobile__button-wrap">

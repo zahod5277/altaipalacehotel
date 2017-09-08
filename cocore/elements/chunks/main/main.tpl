@@ -66,14 +66,14 @@
                     'input' => $offer.image,
                     'options' => 'w=240&h=180&zc=1&q=85'
                 ])}
-                    <div class="section-tabs__item swiper-slide">
+                    <div class="section-tabs__item swiper-slide spec-item">
                         <div class="section-tabs__item__wrap">
                             <img src="{$image}" class="section-tabs__item__image">
                             <div class="section-tabs__item__content">
-                                <h4 class="section-tabs__item__title">{$offer.title}</h4>
+                                <h4 class="section-tabs__item__title spec-order-title">{$offer.title}</h4>
                                 <p class="section-tabs__item__text">{$offer.descr}</p>
                                 <div class="section-tabs__item__button-wrap">
-                                    <div class="section-tabs__item__button">Заказать</div>
+                                    <div class="section-tabs__item__button spec-order-btn">Заказать</div>
                                     <div class="section-tabs__item__action">{$offer.dateUntil}</div>
                                 </div>
                             </div>

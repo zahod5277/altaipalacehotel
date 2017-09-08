@@ -13,10 +13,10 @@
                 </div>
                 <div class="c-opinion__item">
                     <div>Останавливался у нас:</div>
-                    <div>{$_pls['tv.incomingDate']}</div>
+                    <div style="display:block">{$_pls['tv.incomingDate']}</div>
                 </div>
                 <div class="c-opinion__item">
-                    <b>среднее</b>{$_modx->runSnippet('@FILE:snippets/getGuestAverageMark.php',[
+                    {$_modx->runSnippet('@FILE:snippets/getGuestAverageMark.php',[
                         'id' => $id,
                         'tpl' => '@FILE:chunks/guestbook/guestAverageMark.tpl',
                         'mode' => 'chunk'
@@ -31,7 +31,7 @@
                     {$content}
                 </div>
                 {if $_pls['tv.iRecommended']==1}
-                <div class="c-opinion__result">Да, я рекомендую этот отель.</div>
+                    <div class="c-opinion__result">Да, я рекомендую этот отель.</div>
                 {/if}
                 {$_modx->runSnippet('@FILE:snippets/getShareLinks.php',[
                     'resource' => $id,
@@ -47,7 +47,6 @@
         <div class="c-answer__title">ответ</div>
         <div class="c-answer__description">
             {$_pls['tv.hotelAnswer']}
-        </div>
     </div>
 </section>
 {/if}

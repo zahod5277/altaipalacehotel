@@ -13,9 +13,13 @@ if (empty($_SERVER['HTTP_X_REQUESTED_WITH']) || $_SERVER['HTTP_X_REQUESTED_WITH'
 if (!empty($_POST['action'])) {
     switch ($_POST['action']) {
         case 'getTag':
+            $json = $pdo->runSnippet('@FILE:snippets/getTag.php',[
+                'option' => $_POST['tag'],
+                'docid' => $_POST['docid']
+            ]);
             $res = [
-                'success' => 'ее',
-                'html' => 'eeeeee'
+                'status' => 'success',
+                'html' => $json
             ];
             break;
         case 'gallery':

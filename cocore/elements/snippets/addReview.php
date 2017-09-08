@@ -7,7 +7,7 @@
 //Базовые параметры ресурса
 $baseData = [
     'template' => 12,
-    'published' => 1,
+    'published' => 0,
     'parent' => 7
 ];
 
@@ -22,6 +22,7 @@ $formData = [
     'pagetitle' => $pagetitle,
     'alias' => $alias,
     'tvs' => true,
+    'content' => $hook->getValue('content'),
     'tv13' => $hook->getValue('guestName'),
     'tv14' => $hook->getValue('incomingDate'),
     'tv15' => $hook->getValue('contactNumber'),

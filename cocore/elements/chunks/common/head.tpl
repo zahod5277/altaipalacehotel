@@ -25,7 +25,7 @@
     <!-- Common CSS-->
     <link rel="stylesheet" href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" integrity="sha384-dNpIIXE8U05kAbPhy3G1cz+yZmTzA6CY8Vg/u2L9xRnHjJiAK76m2BIEaSEV+/aU" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700&amp;amp;subset=cyrillic" rel="stylesheet">
-    <link href="assets/template/styles/common.css?1503253327373" rel="stylesheet">
+    <link href="assets/template/styles/common.css?1501284127373" rel="stylesheet">
     <link rel="stylesheet" href="assets/template/styles/fixed.css">
     {include 'file:chunks/booking/headScript.tpl'}
 </head>

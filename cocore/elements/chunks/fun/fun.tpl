@@ -27,22 +27,29 @@
                 {else}
                     {var $class = ''}    
                 {/if}
-                <div class="section-tabs-bullet{$class}">{$tag.title}</div>
+                <div class="section-tabs-bullet{$class}" data-pageid="{$_modx->resource.id}" data-tag="{$tag.MIGX_id}">{$tag.title}</div>
                 {var $i = $i+1}
             {/foreach}
         </div>
     </div>
 </section>
 <div id="myCanvasContainer" class="tags-container">
-    <!--canvas#myCanvas.desktop-show(width='auto', height='auto')-->
-    <canvas id="myCanvas" class="desktop-show" width="1349" height="800" style="">
+    <canvas id="myCanvas" class="desktop-show" width="1349" height="500" style="">
         <p>Anything in here will be replaced on browsers that support the canvas element</p>
     </canvas>
+    <div class="tags-container__mobile">
+    <div class="tags-container__content">
+            <div class="tags-container__article">
+                {$tags[0]['descr']}
+                <div class="tags-container__bottom">{$tags[0]['level']}</div>
+            </div>
+        </div>
+    </div>
     <div id="tags" style="display: none;">
         <ul>
             {foreach $tags as $tag}
                 <li>
-                    <a href="#" data-tag="{$tag.MIGX_id}">{$tag.title}</a>
+                    <a href="#" data-pageid="{$_modx->resource.id}" data-tag="{$tag.MIGX_id}">{$tag.title}</a>
                 </li>
             {/foreach}
         </ul>

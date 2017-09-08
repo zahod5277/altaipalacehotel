@@ -46,7 +46,7 @@
             <a href="{$url}" {$bg} rel="gallery1" data-fancybox="images" class="{$mediaClass}fancybox-thumb gallery__col gallery__col_8"></a>
             {case '9'}
             {var $bg = 'style="background-image:url('~$file.thumb~')"'}
-            <a href="{$url}" {$bg} rel="gallery1" data-fancybox="images" class="{$mediaClass}fancybox-thumb gallery__col gallery__col_9"></a>
+            <a href="{$url}" data-nine="yes" {$bg} rel="gallery1" data-fancybox="images" class="{$mediaClass}fancybox-thumb gallery__col gallery__col_9"></a>
         </div>
         {case default}
         {if ($file.idx)==10||(($file.idx%4)==2&&($file.idx)!=12)}

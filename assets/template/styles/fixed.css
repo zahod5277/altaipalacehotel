@@ -54,6 +54,127 @@ section.welcome{
     color:white;
 }
 
+.tags-container__content{
+    z-index: 5000;
+}
+
+.tags-container__mobile .tags-container__content{
+    position: relative;
+    top:0;
+    left: 0px;
+    bottom:0px;
+    z-index: 0;
+}
+
+.guestStarsForm{
+    margin-top: 20px;
+    padding-bottom: 0px!important;
+}
+
+.icon-rating_empty{
+    cursor: pointer;
+}
+
+/*.icon-rating_empty svg{
+    fill:#fff;
+    stroke:#000;
+}
+
+.icon-rating_empty:hover svg{
+    fill: #e4b546;
+    stroke: #e4b546;
+}*/
+
+.stickyBooking{
+    position:fixed!important;
+    top:77px
+}
+
+.c-answer__title{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.two-column__item{
+    min-width: 200px;
+    margin-right: 50px;
+}
+
+.c-tab li:first-child{
+    font-weight: 400!important;
+}
+
+.guest_active{
+    font-weight: bold;
+}
+
+.textcontent h2{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+section.accomodation-basic{
+    border-bottom: 1px solid #adadad;
+}
+
+.header__bottom_no-border{
+    border-bottom: 0px transparent solid!important;
+}
+
+@media(max-width:768px){
+    .m-block__item{
+        width: 80%;
+    }
+    .m-block__price{
+        text-align: right;
+    }
+    
+    .m-block__price{
+        min-width: 75px;
+    }
+    
+    .c-form__input{
+        width: 100%!important;
+    }
+    
+    .c-form__input_button{
+        position: relative;
+        top: 15px;
+    }
+    
+    .fun-info__title{
+       min-width: 300px;
+       text-align: center;
+    }
+    
+    .accomodation-basic__price__button{
+        width: 125px!important;
+        font-size: 12px!important;
+    }
+    
+    .accomodation-basic__price__text{
+        font-size: 12px!important;
+    }
+    
+    .accomodation-welcome__title__stars{
+        display: inline-block;
+    }
+  
+    .welcome__info .wrap .welcome__info__text{
+        font-size: 16px;
+    }
+}
+
+@media(min-width:769px){
+    .tags-container__mobile{
+        display: none;
+    }   
+    .m-block__desc{
+        min-width: 480px
+    }
+}
+
+
 @media(min-width:968px) and (max-width:1400px){
     .popup__spec__form-wrap input{
         font-size: 16px!important;
@@ -62,5 +183,14 @@ section.welcome{
     .popup__spec__input_text-area{
         height: 8vh!important;
         font-size: 16px!important;
+    }
+}
+
+@media(min-width:1400px){
+    .c-answer{
+        max-width: 80%!important;
+    }
+    .c-answer__title{
+        font-size: 22px;
     }
 }

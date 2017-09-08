@@ -1,4 +1,28 @@
 <header class="header">
+    <section style="display:none;" class="popup__spec popup__spec_map">
+        <div class="popup__spec__wrap">
+            <div class="popup__spec__header">
+                <h3 class="popup__spec__title">Cхема проезда</h3>
+                <img src="assets/template/images/svg/button-close.svg" class="popup__spec__button-close">
+            </div>
+            <div class="popup__spec__body">
+                <div id="mapcontactsPopup">
+                    <div style="background-image: url(assets/template/images/tour.jpg)" class="c-tour"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section style="display:none;" class="popup__spec popup__spec_tour">
+        <div class="popup__spec__wrap">
+            <div class="popup__spec__header">
+                <h3 class="popup__spec__title">виртуальный тур</h3>
+                <img src="assets/template/images/svg/button-close.svg" class="popup__spec__button-close">
+            </div>
+            <div class="popup__spec__body">
+                <div style="background-image: url(assets/template/images/tour.jpg)" class="c-tour"></div>
+            </div>
+        </div>
+    </section>
     <div class="wrap">
         <div class="header__top">
             <div class="header__mobile__buttons">
@@ -6,11 +30,11 @@
                 <img src="assets/template/images/svg/button-close-menu.svg" class="header__mobile__close">
             </div>
             <div class="header__items">
-                <a href="#" class="header__item">
+                <a href="#" class="header__item map-trigger">
                     <img src="assets/template/images/svg/arrow-nav.svg" class="header__item__icon">
                     <div class="header__item__text">Схема проезда</div>
                 </a>
-                <a href="#" class="header__item">
+                <a href="#" class="header__item tour-trigger">
                     <img src="assets/template/images/svg/icon-picture.svg" class="header__item__icon">
                     <div class="header__item__text">Виртуальный тур</div>
                 </a>

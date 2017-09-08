@@ -20,7 +20,7 @@
         </div>
     </div>
 </section>
-<div style="position:relative;height:0;padding-bottom:56.25%">
+<div class="contactsVideo">
     {var $video = $_modx->resource.video|fromJSON}
-    <iframe width="100%" height="700" src="{$video.video}" frameborder="0" allowfullscreen></iframe>}
+    <iframe width="100%" height="700" src="{$video.video}" frameborder="0" allowfullscreen></iframe>
 </div>

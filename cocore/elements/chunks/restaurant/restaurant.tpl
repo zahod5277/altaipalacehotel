@@ -24,11 +24,11 @@
                 <div class="m-about__bottom">
                     <span>
                         Бронь столика: 
-                        <a href="tel:+88005553535">8 (800) 500-60-60</a>
+                        <a href="tel:{$_modx->config.restPhone}">{$_modx->config.restPhone}</a>
                     </span>
                     <span>
                         Аренда зала: 
-                        <a href="mailto:info@altaipalace.ru">info@altaipalace.ru</a>
+                        <a href="mailto:{$_modx->config.infoMail}">{$_modx->config.infoMail}</a>
                     </span>
                 </div>
             </div>
