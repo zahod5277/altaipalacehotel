@@ -6,20 +6,12 @@ if (!isset($id)) {
 $pdo = $modx->getService('pdoTools');
 
 //можно было лучше, но пойдет
-$food = $modx->getObject('modTemplateVarResource', [
-            'contentid' => $id,
-            'tmplvarid' => 21
-        ])->get('value');
-
-$comfort = $modx->getObject('modTemplateVarResource', [
-            'contentid' => $id,
-            'tmplvarid' => 19
-        ])->get('value');
-
-$personal = $modx->getObject('modTemplateVarResource', [
-            'contentid' => $id,
-            'tmplvarid' => 20
-        ])->get('value');
+if (!$page = $modx->getObject('modResource', $id)){
+    return;
+};
+$food = $page->getTVValue('starFood');
+$comfort = $page->getTVValue('starComfort');
+$personal = $page->getTVValue('starPersonal');
 
 $summ = floatval($food) + floatval($comfort) + floatval($personal);
 $average = round($summ / 3);

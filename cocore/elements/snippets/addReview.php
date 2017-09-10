@@ -29,10 +29,10 @@ $formData = [
     'tv16' => $hook->getValue('eMail'),
     'tv17' => $hook->getValue('city'),
     'tv18' => $hook->getValue('travelPurpose'),
-    'tv19' => $hook->getValue('starComfort'),
-    'tv20' => $hook->getValue('starPersonal'),
-    'tv21' => $hook->getValue('starFood'),
-    'tv22' => $hook->getValue('iRecommended')
+    'tv19' => !empty($hook->getValue('starComfort'))? $hook->getValue('starComfort') : 3,
+    'tv20' => !empty($hook->getValue('starPersonal')) ? $hook->getValue('starPersonal') : 3,
+    'tv21' => !empty($hook->getValue('starFood')) ? $hook->getValue('starFood') : 3,
+    'tv22' => !empty($hook->getValue('iRecommended')) ? $hook->getValue('iRecommended') : 0
 ];
 //собираем массив
 $data = array_merge($baseData,$formData);
@@ -43,6 +43,5 @@ $response = $modx->runProcessor('resource/create', $data);
 //идем дальше, в другие хуки.
 //По-хорошему бы еще на ошибку красное окошко выдавать, но чото сложно
 if ($response->isError()) {
-//    die(var_dump($modx->error->failure($response->getMessage())) . '<br /><br/></br>?');
 } else {
 }

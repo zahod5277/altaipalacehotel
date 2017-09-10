@@ -145,13 +145,16 @@ var events = {
         }).on('mouseleave', function () {
             $(this).removeClass('active').prevAll().removeClass('active')
         }).on('click', function (e) {
-            // $(this).off('mouseleave').siblings().off('mouseleave');
             $(this).off().siblings().off();
             var rating = $(this).attr('data-rating');
-            console.log(rating);
-            console.log($(this).parent().siblings('input').val(rating));
+            $(this).parent().siblings('input').val(rating);
             $(this).addClass('active').prevAll().addClass('active');
             $(this).off('mouseleave').siblings().off('mouseleave');
+        });
+        $(document).on('af_complete', function(event, response) {
+            if (response.success){
+                $('.popup__spec').hide();
+            }
         });
         // $('hot')
         $('.section-breadcrums__item').on('click', function (e) {

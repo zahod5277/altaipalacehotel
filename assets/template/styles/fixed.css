@@ -121,6 +121,29 @@ section.accomodation-basic{
     border-bottom: 0px transparent solid!important;
 }
 
+.c-rating_3 .icon-rating:nth-child(n+4) svg{
+    fill: none;
+    stroke: #000;
+}
+
+.c-rating_2 .icon-rating:nth-child(n+3) svg{
+    fill: none;
+    stroke: #000;
+}
+
+.c-rating_1 .icon-rating:nth-child(n+1) svg{
+    fill: none;
+    stroke: #000;
+}
+
+.b-rating__item_empty::after{
+    right: 100%;
+}
+
+.b-rating__progress .b-rating__item:nth-child(n+6){
+    display: none;
+}
+
 @media(max-width:768px){
     .m-block__item{
         width: 80%;

@@ -1,46 +1,7 @@
 {include 'file:chunks/guestbook/leaveReview.tpl'}
-<div class="full-width full-width_reverse">
-    <div class="filter-light"></div>
-    <section class="wrap">
-        <div class="three-column">
-            {$_modx->runSnippet('@FILE:snippets/getSummaryAverageMark.php',[
-                'tpl' => '@FILE:chunks/guestbook/summaryAverageMark.tpl'
-            ])}
-        </div>
-        <div class="b-rating">
-            <div class="b-column">
-                <div class="b-rating__text">Комфортабельность номера</div>
-                <div class="b-rating__progress">
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item b-rating__item_half"></div>
-                </div>
-            </div>
-            <div class="b-column">
-                <div class="b-rating__text">Отзывчивость персонала</div>
-                <div class="b-rating__progress">
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                </div>
-            </div>
-            <div class="b-column">
-                <div class="b-rating__text">Еда и напитки</div>
-                <div class="b-rating__progress">
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                    <div class="b-rating__item"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
+{$_modx->runSnippet('@FILE:snippets/getSummaryAverageMark.php',[
+    'tpl' => '@FILE:chunks/guestbook/summaryAverageMark.tpl'
+])}
 <section class="wrap">
     <div class="c-tab">
         <ul>
