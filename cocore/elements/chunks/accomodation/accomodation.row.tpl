@@ -1,4 +1,7 @@
-<section class="accomodation-basic accomodation-lux">
+{if $idx == $_modx->getPlaceholder('totalus')}
+    {var $class = ' accomodation-basic_no-border-bottom'}
+{/if}
+<section class="accomodation-basic accomodation-lux{$class}">
     <div class="wrap">
         <h2 class="section__title">{$pagetitle}</h2>
         <div class="accomodation-basic-wrap swiper-container">

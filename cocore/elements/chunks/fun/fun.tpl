@@ -5,7 +5,7 @@
     {$_modx->runSnippet('ms2GalleryResources',[
         'parents' => $_modx->resource.id,
         'typeOfJoin' => 'inner',
-        'includeTVs' => 'ico',
+        'includeTVs' => 'ico,funIco',
         'includeThumbs' => 'small,wide',
         'includeOriginal' => 1,
         'showLog' => 0,

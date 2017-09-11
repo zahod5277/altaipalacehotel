@@ -8,5 +8,5 @@
     <script src="assets/template/scripts/sticky.js"></script>
     <script src="assets/template/scripts/libs/datetimepicker/jquery.datetimepicker.full.min.js"></script>
     <script src="assets/template/scripts/libs/combodate/combodate.js"></script>
-    <script src="assets/template/scripts/main.js"></script>
+    <script src="assets/template/scripts/main.js?{''|date_format:'%s'}"></script>
 {/block}

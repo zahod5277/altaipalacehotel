@@ -5,7 +5,13 @@
     </div>
     <div class="fun-info__article">
         <div class="wrap">
-            <h2 class="fun-info__subtitle">{$longtitle}</h2>
+            <h2 class="fun-info__subtitle">
+                {if $_pls['tv.funIco']?}
+                    {var $class = ' style="background-image:url('~$_pls['tv.funIco']~')"'}
+                {/if}
+                <i class="fun-icon"{$class}></i>
+                {$longtitle}
+            </h2>
             <p class="fun-info__description">
                 {$introtext}
             </p>

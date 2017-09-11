@@ -1,4 +1,12 @@
-<header class="header">
+{*Сначала нарисовали плохие макеты, а теперь приходится изголяться и 
+то на одной странице полосочку убирать, то на другой добавлять, и в общем это ужас какой-то.*}
+{switch $_modx->resource.id}
+    {case 1,3,8,7}
+    {var $class=' no-border-bottom'}
+    {case default}
+    {var $class=''}
+{/switch}
+<header class="header{$class}">
     <section style="display:none;" class="popup__spec popup__spec_map">
         <div class="popup__spec__wrap">
             <div class="popup__spec__header">

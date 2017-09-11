@@ -10,11 +10,18 @@
     'processTVs' => 1,
     'prepareTVs' => 1,
     'sortby' => 'menuindex',
+    'totalVar' => 'totalus',
     'sortdir' => 'ASC',
     'tpl' => '@FILE:chunks/accomodation/accomodation.row.tpl'
 ])}
 
-<section class="regulations">
+{if $_modx->resource.id==2}
+    {$_modx->resource.reserveRules}
+    {else}
+    [[#2.reserveRules]]
+{/if}
+{*закомментируем бэкап правил бронирования на случай, если какой-нибудь даун удалит разметку*}
+{*<section class="regulations">
     <div class="wrap">
         <h1 class="regulations__title">Правила бронирования</h1>
         <ul class="regulations__list">
@@ -26,4 +33,4 @@
         <p class="regulations__text">В стоимость номера входят: завтрак, охраняемая парковка, wi-fi, все налоги и сборы.</p><span class="regulations__important">ВАЖНАЯ ИНФОРМАЦИЯ!</span>
         <p class="regulations__text">Бронирование номеров ТОЛЬКО по предоплате. Не менее 30% от стоимости всего периода проживания. Либо, ПОЛНАЯ оплата первых суток пребывания. В предвыходные и выходные дни, на летнее время, бронирование номеров доступно на период НЕ МЕНЕЕ 3 суток.</p>
     </div>
-</section>
+</section>*}

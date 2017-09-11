@@ -54,7 +54,7 @@
             {/if}
             {var $bg = 'style="background-image:url('~$file.thumb~')"'}
             <a data-idx="{$file.idx}"  {$bg} href="{$url}" rel="gallery1" data-fancybox="images" class="{$mediaClass}fancybox-thumb gallery__col gallery__col_6"></a>
-            {if ($file.idx%4==1)||(($files|length)==($file.idx))}
+            {if ($file.idx%4==1)||(($files|length)==($file.idx)&&($file.idx!=10))}
             </div>
         {/if}
         {/switch}

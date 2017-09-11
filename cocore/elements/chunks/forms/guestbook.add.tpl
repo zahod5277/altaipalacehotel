@@ -1,17 +1,3 @@
-{*<form action="{$_modx->resource.id|url}" class="ajax_form" method="POST" enctype="multipart/form-data">
-    <input type="text" name="guestName" class="form-control" placeholder="Имя">
-    <input type="text" name="incomingDate" class="form-control" placeholder="Дата заезда">
-    <input type="text" name="contactNumber" class="form-control" placeholder="Номер телефона">
-    <input type="text" name="eMail" class="form-control" placeholder="Емайл">
-    <input type="text" name="city" class="form-control" placeholder="Город">
-    <input type="text" name="travelPurpose" class="form-control" placeholder="Цель поездки">
-    <input type="text" name="starComfort" class="form-control" placeholder="Комфорт">
-    <input type="text" name="starPersonal" class="form-control" placeholder="Персонал">
-    <input type="text" name="starFood" class="form-control" placeholder="Еда">
-    <input type="text" name="iRecommended" class="form-control" placeholder="Я рекомендую">
-    <button type="submit" name="submit" class="btn">Отправить</button>
-</form>*}
-
 <div class="popup__spec__body">
     <form class="popup__spec__form ajax_form" method="POST" action="{$_modx->resource.id|url}">
         <div class="popup__spec__form-wrap">
@@ -27,8 +13,7 @@
         </div>
         <p class="popup-checkbox">Цель вашей поездки
         </p>
-        {*<input type="hidden" name="travelPurpose" value="не указано">*}
-        <ul>
+        <ul class="c-checkboxes">
             <li>
                 <input type="checkbox" name="travelPurpose" value="Выходные" id="weekend">
                 <label for="weekend">Выходные</label>
@@ -81,7 +66,7 @@
                 <input type="hidden" name="starComfort" value="3">
             </div>
             <div class="three-column__item">
-               <div class="c-rating c-rating_input">
+                <div class="c-rating c-rating_input">
                     <span class="icon-rating" data-rating="1">
                         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 17"><path d="M15.85 6.7a.28.28 0 0 0-.23-.18l-5.13-.74-2.3-4.62a.28.28 0 0 0-.51 0l-2.3 4.62-5.14.74A.28.28 0 0 0 .1 7l3.71 3.6-.87 5.07c-.02.1.02.21.11.28.09.06.2.07.3.02l4.6-2.4 4.59 2.4a.28.28 0 0 0 .41-.3l-.88-5.08L15.78 7c.08-.07.1-.18.07-.28z"></path></svg>
                     </span>
@@ -139,7 +124,7 @@
             <label for="recomended">Да, я рекомендую этот отель</label>
         </div>
         <div class="popup__spec__form-wrap popup__spec__form-wrap_guest">
-            <input type="submit" value="заказать" class="popup__spec__input popup__spec__input-button">
+            <input type="submit" value="Отправить" class="popup__spec__input popup__spec__input-button">
         </div>
         <p class="popup__spec__text">*Все поля обязательны к заполнению. Перед публикацией отзыва даминистрация отеля проверит ваши данные, для подтверждения пребывания в нашем отеле. Пожалуйста, укажите достоверную информацию во избежании недоразумений.</p>
     </form>

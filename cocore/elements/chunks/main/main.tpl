@@ -1,4 +1,4 @@
-<section style="background-image: url('assets/template/images/timelapse-video.jpg');" class="welcome">
+<section style="background-image: url('assets/template/images/timelapse-video.jpg');" class="welcome section-slider__no-margin-top">
     <div class="wrap">
         <div class="welcome__content">
             <h1 class="welcome__title">Арт-отель</h1>
@@ -64,21 +64,21 @@
                     {foreach $offers as $offer}
                         {var $image = $_modx->runSnippet('phpthumbon',[
                     'input' => $offer.image,
-                    'options' => 'w=240&h=180&zc=1&q=85'
+                    'options' => 'w=240&h=180&zc=1&q=90'
                 ])}
-                    <div class="section-tabs__item swiper-slide spec-item">
-                        <div class="section-tabs__item__wrap">
-                            <img src="{$image}" class="section-tabs__item__image">
-                            <div class="section-tabs__item__content">
-                                <h4 class="section-tabs__item__title spec-order-title">{$offer.title}</h4>
-                                <p class="section-tabs__item__text">{$offer.descr}</p>
-                                <div class="section-tabs__item__button-wrap">
-                                    <div class="section-tabs__item__button spec-order-btn">Заказать</div>
-                                    <div class="section-tabs__item__action">{$offer.dateUntil}</div>
+                        <div class="section-tabs__item swiper-slide spec-item">
+                            <div class="section-tabs__item__wrap">
+                                <img src="{$image}" class="section-tabs__item__image">
+                                <div class="section-tabs__item__content">
+                                    <h4 class="section-tabs__item__title spec-order-title">{$offer.title}</h4>
+                                    <p class="section-tabs__item__text">{$offer.descr}</p>
+                                    <div class="section-tabs__item__button-wrap">
+                                        <div class="section-tabs__item__button spec-order-btn">Заказать</div>
+                                        <div class="section-tabs__item__action">{$offer.dateUntil}</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
                     {/foreach}
                 </div>
             </div>
@@ -101,7 +101,7 @@
                 <div class="section-tabs__slide__video">
                     <div style="position:relative;height:0;padding-bottom:56.25%" class="section-tabs__slide__video-wrap">
                         {var $video = $_modx->resource.video|fromJSON}
-                        <iframe width="100%" height="365" src="{$video.video}" frameborder="0" allowfullscreen></iframe>}
+                        <iframe width="100%" height="365" src="{$video.video}" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen="" async=""></iframe>}
                     </div>
                 </div>
                 <div class="section-tabs__slide__right">
@@ -110,7 +110,7 @@
                     <p class="section-tabs__slide__text">Мы собрали всю необходимую информацию об отеле и об услугах, предоставляемых в нашем комплексе. Желаем Вам прекрасного отдыха и будем рады окружить Вас заботой и предоставить все необходимое, чтобы сделать Ваше пребывание у нас поистине незабываемым.</p>
                 </div>
             </div>
-        </div>
+        </div>      
         <div class="section-tabs__slide">
             <div class="wrap contacts-wrap">
                 <div class="section-tabs__slide__contacts">

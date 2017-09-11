@@ -9,5 +9,5 @@
     <script src="assets/template/scripts/tagcanvas.js"></script>
     <script src="assets/template/scripts/tagEvents.js"></script>
     <script src="assets/template/scripts/sticky.js"></script>
-    <script src="assets/template/scripts/main.js"></script>
+    <script src="assets/template/scripts/main.js?{''|date_format:'%s'}"></script>
 {/block}

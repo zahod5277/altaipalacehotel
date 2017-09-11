@@ -4,7 +4,7 @@
         {include 'file:chunks/accomodation/accomodationAdvantages.tpl'}
     </div>
 </section>
-<section class="accomodation-basic accomodation-lux">
+<section class="accomodation-basic accomodation-lux accomodation-basic_no-border-bottom">
     <div class="wrap">
         <h2 class="section__title">{$_modx->resource.pagetitle}</h2>
         <div class="accomodation-basic-wrap swiper-container">
@@ -51,3 +51,8 @@
         </div>
     </div>
 </section>
+{if $_modx->resource.id==2}
+    {$_modx->resource.reserveRules}
+    {else}
+    [[#2.reserveRules]]
+{/if}

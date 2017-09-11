@@ -1,4 +1,4 @@
-<section class="section-slider">
+<section class="section-slider section-slider__no-margin-top">
     <div class="section-slider-wrap swiper-container">
         <div class="swiper-wrapper">
             {$_modx->runSnippet('ms2Gallery',[

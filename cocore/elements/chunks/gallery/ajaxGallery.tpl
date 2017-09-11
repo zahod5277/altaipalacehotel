@@ -10,12 +10,12 @@
                 'tpl' => '@FILE:chunks/gallery/gallery.row.tpl',
                 'resources' => $gallery,
                 'offset' => 9,
-                'limit' => 12,
+                'limit' => 8,
                 'ajax' => 1,
                 'setMeta' => 1,
                 'ajaxMode' => 'button',
                 'frontend_css' => '',
-                'ajaxTplMore' => '@INLINE <a href="#" class="gallery__button btn-more">больше фотографий</a>'
+                'ajaxTplMore' => '@INLINE <a class="gallery__button btn-more">больше фотографий</a>'
             ])}
     </div>
     {$_modx->getPlaceholder('page.nav')}

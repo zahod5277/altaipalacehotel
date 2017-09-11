@@ -1,7 +1,13 @@
 <div class="accomodation-welcome__wrap">
-    <p class="accomodation-welcome__text">Во всех номерах: Wi-Fi, индивидуальный кондиционер, сейф, холодильник, телефон, телевизор (в том числе на иностранных языках), фен, письменные принадлежности. В ванных комнатах — современная сантехника и необходимые туалетные принадлежности.
-        <br>По запросу предоставляются: зубная паста, щетка, расческа, бритвенный набор.</p>
-    <p class="accomodation-welcome__text">Номера отеля оборудованы системой электронных замков. Работает круглосуточная система видеоконтроля.</p>
+    <div class="accomodation-welcome__text">
+        <p class="accomodation-welcome__text">
+        {if $_modx->resource.id==2}
+            {$_modx->resource.content}
+            {else}
+            [[#2.content]]
+        {/if}
+    </p>
+    </div>
     <div class="accomodation-welcome__items">
         <div class="accomodation-welcome__item">
             <img src="assets/template/images/icon_wifi.png" class="accomodation-welcome__item__icon">

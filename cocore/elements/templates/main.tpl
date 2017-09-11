@@ -15,6 +15,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.3.0/moment-timezone-utils.min.js"></script>
     <script src="assets/template/scripts/sticky.js"></script>
     <script src="assets/template/scripts/front-clock.js"></script>
-    
-    <script src="assets/template/scripts/main.js"></script>
+    <script src="assets/template/scripts/libs/slick/slick.min.js"></script>
+    <script src="assets/template/scripts/main.js?{''|date_format:'%s'}"></script>
+    <link rel="stylesheet" href="assets/template/scripts/libs/slick/slick.css"/>
+    <link rel="stylesheet" href="assets/template/scripts/libs/slick/slick-theme.css"/>
 {/block}

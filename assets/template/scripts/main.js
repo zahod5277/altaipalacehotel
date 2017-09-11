@@ -32,23 +32,24 @@ var app = {
 }
 
 window.onload = function () {
-    navigationAll()
-    popUpOpen()
-    menuOpen()
-    bookingOpen()
-    switchTabs()
-    app.init()
-    specOrder()
+    navigationAll();
+    popUpOpen();
+    menuOpen();
+    bookingOpen();
+    switchTabs();
+    app.init();
+    specOrder();
     if ($('#myCanvas').length) {
-        tagEvents()
+        tagEvents();
     }
     if ($('.fun-info-block').length) {
-        globalEvents()
+        globalEvents();
     }
-    gallery.init()
-    gallery.ajaxGallery()
-    events.init()
+    gallery.init();
+    gallery.ajaxGallery();
+    events.init();
     guestbook.init();
+    sliderSpecFront();
 }
 
 function initMapContacts(map) {
@@ -102,7 +103,7 @@ function tagEvents() {
     canvas.height = containerHeight
     TagCanvas.Start('myCanvas', 'tags', {
         textColour: '#ffffff',
-        outlineColour: '#ffffff',
+        outlineColour: 'transparent',
         textHeight: 40,
         activeCursor: 'pointer',
         initial: [0.03, 0.03],
@@ -151,8 +152,8 @@ var events = {
             $(this).addClass('active').prevAll().addClass('active');
             $(this).off('mouseleave').siblings().off('mouseleave');
         });
-        $(document).on('af_complete', function(event, response) {
-            if (response.success){
+        $(document).on('af_complete', function (event, response) {
+            if (response.success) {
                 $('.popup__spec').hide();
             }
         });
@@ -172,14 +173,14 @@ var events = {
 }
 
 var guestbook = {
-    init: function(){
-        $('.c-tab a').on('click', function(e){
-           e.preventDefault();
-           var type = $(this).data('guest');
-           $('.c-tab a').removeClass('guest_active');
-           $(this).addClass('guest_active');
-           $('.guests').hide();
-           $('.guests[data-guest="'+type+'"]').show();
+    init: function () {
+        $('.c-tab a').on('click', function (e) {
+            e.preventDefault();
+            var type = $(this).data('guest');
+            $('.c-tab a').removeClass('guest_active');
+            $(this).addClass('guest_active');
+            $('.guests').hide();
+            $('.guests[data-guest="' + type + '"]').show();
         });
     }
 }
@@ -394,20 +395,35 @@ function sliderAccomodationsTwo() {
 }
 
 function sliderSpecFront() {
-    var mySwiper = new Swiper('.section-tabs__slider-swiper .accomodation-basic-wrap', {
-        // Optional parameters
-        direction: 'horizontal',
-        loop: true,
-        slidesPerView: 1,
-        paginationClickable: false,
-        spaceBetween: 30,
-        nextButton: '.accomodation-basic__pagination_right',
-        prevButton: '.accomodation-basic__pagination_left',
-        pagination: '.swiper-pagination',
-        centeredSlides: true
-
-    })
-
+    if ($.fn.slick) {
+        $('.section-tabs__slider-swiper .swiper-wrapper').slick({
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                    }
+                },
+                {
+                    breakpoint: 768,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }]
+        });
+    }
 }
 
 function specOrder() {

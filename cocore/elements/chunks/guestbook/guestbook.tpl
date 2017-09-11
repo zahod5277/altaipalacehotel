@@ -25,7 +25,7 @@
     'tplPage' => '@INLINE <li> <a href="{$href}">{$pageNo}</a></li>',
     'tplPageWrapper' => '@INLINE <div class="c-pagination"><ul>{$pages}</ul></div>',
     'tplPageActive' => '@INLINE <li class="current"><a href="{$href}">{$pageNo}</a></li>',
-    'sortby' => 'menuindex',
+    'sortby' => 'publishedon',
     'sortdir' => 'DESC',
     'pageNavVar' => 'all.nav',
     'pageVarKey' => 'allpage'
