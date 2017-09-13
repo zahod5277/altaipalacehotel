@@ -1,3 +1,15 @@
+.section-tabs-bullet_active{
+    background: #fff!important;
+}
+
+.fun-info-block:hover .fun-info__title{
+    background: transparent;
+}
+
+.swiper-slide>a{
+    left:0px;
+}
+
 section.welcome{
     height: calc(100vh - 153px)!important;
     margin-top: 0px;
@@ -21,8 +33,24 @@ section.welcome{
 
 .textcontent{
     font-size: 16px;
-    line-height: 24px;
-    font-family: 'Myriad Pro', sans-serif
+    line-height: 2em;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+.textcontent h2{
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 40px;
+}
+
+
+.textcontent h3{
+    font-size: 24px;
+    line-height: 22px;
+    margin-bottom: 30px;
 }
 
 .textcontent ul {
@@ -98,11 +126,6 @@ section.welcome{
     font-weight: bold;
 }
 
-.textcontent h2{
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-
 section.accomodation-basic{
     border-bottom: 1px solid #adadad;
 }
@@ -138,6 +161,13 @@ section.accomodation-basic{
     border-bottom: 1px solid transparent!important;
 }
 
+.gallery__col_text:after{
+    background: transparent;
+}
+
+.sitemap{
+    margin-bottom: 20px;
+}
 
 @media(orientation: portrait) and (max-width:680px){
     .section-tabs__items .section-tabs__item .section-tabs__item__wrap{
@@ -196,9 +226,47 @@ section.accomodation-basic{
     .two-column__item{
         margin-right: 15px;
     }
+    
+    .welcome__info{
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
+    
+    .tags-container{
+        background: #000;
+    }
+    
+    .gallery__col_text ul{
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    
+    .gallery__col_text{
+        min-height:250px; 
+    }
+    
+    .gallery__row_large{
+       height: 540px;
+    }
+    
+    .gallery__col_text ul li{
+        padding-left: 20px;
+        position: relative;
+        font-size: 14px;
+        line-height: 27px;
+    }
+    
+    section.section-tabs .section-tabs-pagination .section-tabs-bullet{
+        background-color: rgba(0,0,0,1);
+    }
+    
+    section.section-tabs .section-tabs-pagination .section-tabs-bullet:nth-child(odd){
+        background-color: #000;
+    }
 }
 
-@media(max-width:768px){
+@media(max-width:767px){
     .m-block__item{
         width: 80%;
     }
@@ -252,17 +320,60 @@ section.accomodation-basic{
     
     .filter-light{
         height: 180px;
-    }
+    }   
     
 }
 
-@media(min-width:769px){
+
+@media(min-width:1024px){
+    .sitemap{
+        float:left;
+        width: 33.3%;
+    }
+    
+    .tags-container{
+        display: block!important;
+    }
+}
+
+.sitemap ul{
+    padding-left: 0px;
+}
+
+.sitemap__level-1{
+    font-size: 32px;
+    line-height: 48px;
+    margin-bottom: 20px;
+    list-style: none;
+}
+
+.sitemap__level-1 a{
+    text-decoration: none;
+}
+
+.sitemap__level-2{
+    list-style: none;
+    line-height: 30px;
+}
+
+.sitemap__level-2 a{
+    font-size: 18px;
+    text-decoration: none;
+    line-height: 24px;
+}
+
+@media(min-width:768px){
     .tags-container__mobile{
         display: none;
     }   
     .m-block__desc{
         min-width: 480px
     }
+    
+    .tags-container{
+        display: none;
+    }
+    
 }
 
 @media(min-width:968px) and (max-width:1024px){
@@ -291,6 +402,11 @@ section.accomodation-basic{
     .tags-container{
         display: none;
     }
+        
+    .welcome__info{
+        margin-bottom: 20px;
+        margin-top: 0px;
+    }
 }
 
 
@@ -316,7 +432,7 @@ section.accomodation-basic{
 
 @media(max-width:568px){
     .section-breadcrums__item{
-        font-size: 12px!important;
+        font-size: 10px!important;
     }
     
     section.popup__booking{

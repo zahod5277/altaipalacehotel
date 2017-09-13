@@ -264,29 +264,20 @@ function navigationAll() {
 function popUpOpen() {
     $('.section-spec__item__button, .section-tabs__item__button, .c-progress__desc_button, .tour-trigger, .map-trigger').click(function (e) {
         e.preventDefault();
-        var currentItem;
-        var popUp, buttonClose;
+        
+        var currentItem,
+        popUp, buttonClose,
+        
+        data = $(this).data('modal');
+        popUp = $('section[data-modal="'+data+'"]');
+        
         buttonClose = $('.popup__spec__button-close');
-        currentItem = e.currentTarget;
-        if (!$(currentItem).hasClass('tour-trigger')) {
-            if ($(currentItem).hasClass('map-trigger')) {
-                popUp = $('.popup__spec_map')
-            } else if ($(currentItem).hasClass('c-progress__desc_button')) {
-                popUp = $('.popup__guest')
-            } else {
-                popUp = $('.popup_special')
-            }
-        } else {
-            popUp = $('.popup__spec_tour');
-        }
-        // else if ($(currentItem).hasClass())
-        // (e.$(currentTarget).hasClass('tour-trigger'));
-        $(popUp).css('display', 'flex').hide().fadeIn()
-        $('body').addClass('fixed__body')
+        $(popUp).css('display', 'flex').hide().fadeIn();
+        $('body').addClass('fixed__body');
 
         $(buttonClose).click(function () {
-            $(popUp).fadeOut()
-            $('body').removeClass('fixed__body')
+            $(popUp).fadeOut();
+            $('body').removeClass('fixed__body');
         })
     })
 }
