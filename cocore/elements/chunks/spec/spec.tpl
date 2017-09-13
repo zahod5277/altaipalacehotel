@@ -23,7 +23,7 @@
                                 {$offer.descr}
                             </p>
                             <div class="section-spec__item__button-wrap">
-                                <div class="section-spec__item__button spec-order-btn">Заказать</div>
+                                <div class="section-spec__item__button spec-order-btn" data-modal="spec">Заказать</div>
                                 <div class="section-spec__item__action">{$offer.dateUntil}</div>
                             </div>
                         </div>

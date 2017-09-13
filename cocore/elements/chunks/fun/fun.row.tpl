@@ -1,4 +1,4 @@
-<div class="fun-info-block">
+<div class="fun-info-block" id="fun_{$id}">
     <div class="fun-info__item">
         <div class="fun-info__content" style="background-image:url('{$wide}')"></div>
         <h2 class="fun-info__title">{$pagetitle}</h2>

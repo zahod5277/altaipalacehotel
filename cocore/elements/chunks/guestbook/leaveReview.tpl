@@ -1,4 +1,4 @@
-<section style="display:none;" class="popup__spec popup__guest">
+<section style="display:none;" class="popup__spec popup__guest" data-modal="leaveReview">
     <div class="popup__spec__wrap">
         <div class="popup__spec__header">
             <h3 class="popup__spec__title">оставить отзыв*</h3>

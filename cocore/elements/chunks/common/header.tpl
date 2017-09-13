@@ -7,7 +7,7 @@
     {var $class=''}
 {/switch}
 <header class="header{$class}">
-    <section style="display:none;" class="popup__spec popup__spec_map">
+    <section style="display:none;" class="popup__spec popup__spec_map" data-modal="map">
         <div class="popup__spec__wrap">
             <div class="popup__spec__header">
                 <h3 class="popup__spec__title">Cхема проезда</h3>
@@ -20,7 +20,7 @@
             </div>
         </div>
     </section>
-    <section style="display:none;" class="popup__spec popup__spec_tour">
+    <section style="display:none;" class="popup__spec popup__spec_tour" data-modal="tour">
         <div class="popup__spec__wrap">
             <div class="popup__spec__header">
                 <h3 class="popup__spec__title">виртуальный тур</h3>
@@ -38,11 +38,11 @@
                 <img src="assets/template/images/svg/button-close-menu.svg" class="header__mobile__close">
             </div>
             <div class="header__items">
-                <a href="#" class="header__item map-trigger">
+                <a href="#" class="header__item map-trigger" data-modal="map">
                     <img src="assets/template/images/svg/arrow-nav.svg" class="header__item__icon">
                     <div class="header__item__text">Схема проезда</div>
                 </a>
-                <a href="#" class="header__item tour-trigger">
+                <a href="#" class="header__item tour-trigger" data-modal="tour">
                     <img src="assets/template/images/svg/icon-picture.svg" class="header__item__icon">
                     <div class="header__item__text">Виртуальный тур</div>
                 </a>

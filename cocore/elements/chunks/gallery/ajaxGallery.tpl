@@ -15,7 +15,7 @@
                 'setMeta' => 1,
                 'ajaxMode' => 'button',
                 'frontend_css' => '',
-                'ajaxTplMore' => '@INLINE <a class="gallery__button btn-more">больше фотографий</a>'
+                'ajaxTplMore' => '@INLINE <button class="gallery__button btn-more">больше фотографий</button>'
             ])}
     </div>
     {$_modx->getPlaceholder('page.nav')}

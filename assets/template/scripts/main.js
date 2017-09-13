@@ -77,21 +77,21 @@ var gallery = {
     },
     init: function () {
         if (!this.slides.length)
-            return 0
+            return 0;
         this.slides.fancybox(this.options)
         $('a[rel=gallery1]').fancybox(this.options)
         $('a[rel=gallery2]').fancybox(this.options)
         $('a[rel=gallery3]').fancybox(this.options)
         if ($('#pdopage div').is('.gallery__row')) {
-            $('.ajaxGallery').show()
+            $('.ajaxGallery').show();
         }
     },
     ajaxGallery: function () {
         $('.ajaxGallery').on('click', function (e) {
-            e.preventDefault()
-            $(this).hide()
-            $('#pdopage').show()
-        })
+            e.preventDefault();
+            $(this).hide();
+            $('#pdopage').show();
+        });
     }
 }
 
@@ -114,13 +114,13 @@ function tagEvents() {
     var i, et = $('#tags a')
     for (i in et) {
         et[i].nodeName == 'A' && et[i].addEventListener('click', function (e) {
-            e.preventDefault()
+            e.preventDefault();
             //и вот тут вся хурма
-            getAjaxTags(this)
+            getAjaxTags(this);
         })
     }
     $('.section-tabs-pagination .section-tabs-bullet').on('click', function () {
-        getAjaxTags(this)
+        getAjaxTags(this);
     })
 }
 
@@ -135,9 +135,9 @@ var events = {
             var Y = e.pageY // положения по оси Y
             var offset = $('.tags-container').offset()
             $('.tags-container__overlay .tags-container__content').css({top: Y - offset.top, left: X})
-            $(this).toggleClass('active')
+            $(this).toggleClass('active');
             if (!$(this).hasClass('active')) {
-                TagCanvas.Resume('myCanvas')
+                TagCanvas.Resume('myCanvas');
             }
         });
         $('.icon-rating').on('mouseenter', function (e) {

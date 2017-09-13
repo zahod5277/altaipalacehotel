@@ -32,7 +32,7 @@
                 </div>
             </div>
             <div class="three-column__item">
-                <span class="c-progress__desc c-progress__desc_button">написать отзыв</span>
+                <span class="c-progress__desc c-progress__desc_button" data-modal="leaveReview">написать отзыв</span>
             </div>
         </div>
         <div class="b-rating">

@@ -1,4 +1,4 @@
-<section style="display:none;" class="popup__spec" id="specOrder">
+<section style="display:none;" class="popup__spec" id="specOrder" data-modal="spec">
     <div class="popup__spec__wrap">
         <div class="popup__spec__header">
             <h3 class="popup__spec__title">Все включено</h3>

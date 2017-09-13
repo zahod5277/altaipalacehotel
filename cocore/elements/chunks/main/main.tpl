@@ -73,7 +73,7 @@
                                     <h4 class="section-tabs__item__title spec-order-title">{$offer.title}</h4>
                                     <p class="section-tabs__item__text">{$offer.descr}</p>
                                     <div class="section-tabs__item__button-wrap">
-                                        <div class="section-tabs__item__button spec-order-btn">Заказать</div>
+                                        <div class="section-tabs__item__button spec-order-btn" data-modal="spec">Заказать</div>
                                         <div class="section-tabs__item__action">{$offer.dateUntil}</div>
                                     </div>
                                 </div>

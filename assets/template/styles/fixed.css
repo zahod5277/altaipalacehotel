@@ -1,3 +1,7 @@
+.gallery__button{
+    background-color: white;
+}
+
 .section-tabs-bullet_active{
     background: #fff!important;
 }
@@ -134,6 +138,10 @@ section.accomodation-basic{
     border-bottom: 0px transparent solid!important;
 }
 
+.header__bottom{
+    border-bottom: 0px transparent solid!important;
+}
+
 .c-rating_3 .icon-rating:nth-child(n+4) svg{
     fill: none;
     stroke: #000;
@@ -263,6 +271,10 @@ section.accomodation-basic{
     
     section.section-tabs .section-tabs-pagination .section-tabs-bullet:nth-child(odd){
         background-color: #000;
+    }
+    
+    header.header{
+        border-bottom: 1px solid transparent;
     }
 }
 
