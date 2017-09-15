@@ -1,12 +1,10 @@
-<section style="background-image: url('assets/template/images/timelapse-video.jpg');" class="welcome section-slider__no-margin-top">
-    <div class="wrap">
-        <div class="welcome__content">
-            <h1 class="welcome__title">Арт-отель</h1>
-            <p class="welcome__text">Окруженный со всех сторон горами и холмами, их легендами и памятью об исторических событиях – наш отель является оазисом покоя и уюта. Праздник культуры начнется здесь, в роскошном интерьере, а наш ресторан поразит гостей самобытной кухней и круглосуточным
-                обслуживанием, что является диковинкой в этих далеких местах.</p>
-        </div>
-    </div>
-</section>
+{$_modx->runSnippet('ms2Gallery',[
+    'resources' => 1,
+    'tags' => 'слайдер',
+    'tpl' => '@FILE:chunks/main/firstScreen.tpl',
+    'sortby' => 'RAND()',
+    'limit' => 1
+    ])}
 <div class="welcome__mobile">
     <div class="wrap">
         <div class="welcome__mobile__content">
@@ -28,7 +26,9 @@
     {$_modx->runSnippet('ms2Gallery',[
         'tpl' => '@FILE:chunks/main/mainGallery.tpl',
         'showLog' => 0,
-        'includeThumbs' => 'mainPage'
+        'includeThumbs' => 'mainPage',  
+        'filetype' => 'image',
+        'tags' => 'галерея'
     ])}
 </section>
 <section class="section-enjoy">

@@ -9,7 +9,7 @@
                 <div class="footer__contacts">
                     <p class="footer__text-simple">Алтай Пэлас Отель</p>
                     <p class="footer__text-colored">Алтайский Край, игорная зона «Сибирская монета»</p>
-                    <p class="footer__text-simple">Служба бронирования: +7 (963) 512-52-72 | +7 (800) 444-15-13</p>
+                    <p class="footer__text-simple">Служба бронирования: <span class="tel">{$_modx->config.reservePhone} | {$_modx->config.restPhone}</span></p>
                 </div>
                 <nav class="footer__nav">
                     <ul class="footer__nav__list">

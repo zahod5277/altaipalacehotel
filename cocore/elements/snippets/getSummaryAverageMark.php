@@ -4,7 +4,8 @@ $pdo = $modx->getService('pdoTools');
 $pages = $modx->getIterator('modResource', [
     'parent' => 7,
     'template:=' => 12,
-    'published:=' => 1
+    'published:=' => 1,
+    'deletetd:=' => 1
         ]);
 $i = 0;
 
@@ -57,11 +58,11 @@ foreach ($summary as $key => $summ) {
     $outputMarks[$key] .= $marks;
 }
 return $pdo->getChunk($tpl, [
-            'average' => $average,
-            'absAverage' => round($average),
-            'recommPercent' => $recommPercent,
-            'comfort' => $summary['comfort'],
-            'food' => $summary['food'],
-            'personal' => $summary['personal'],
+            'average' => !is_nan($average)?$average:0,
+            'absAverage' => !is_nan($average)?round($average):0,
+            'recommPercent' => !is_nan($recommPercent)?$recommPercent:0,
+            'comfort' => !is_nan($summary['comfort'])?$summary['comfort']:0,
+            'food' => !is_nan($summary['food'])?$summary['food']:0,
+            'personal' => !is_nan($summary['personal'])?$summary['personal']:0,
             'marks' => $outputMarks
         ]);

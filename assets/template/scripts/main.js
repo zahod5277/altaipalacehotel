@@ -204,6 +204,22 @@ function getAjaxTags(el) {
     })
 }
 
+function heroSlider() {
+  if(!$('.hero').length) {
+    var heroSwiper = new Swiper('.swiper-container', {
+      grabCursor: true,
+      slidesPerView: 1,
+      autoStart: true,
+      nextButton: '.section-slider__buttons__nav-right',
+      prevButton: '.section-slider__buttons__nav-left',
+      // initialSlide: 0,
+      loop: true,
+      speed: 1000
+    });
+  }
+}
+
+
 function globalEvents() {
     $('.fun-info-block').on('click', function (e) {
         $(this).toggleClass('active').siblings().removeClass('active')
