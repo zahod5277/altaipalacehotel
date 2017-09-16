@@ -1,10 +1,21 @@
-{$_modx->runSnippet('ms2Gallery',[
-    'resources' => 1,
-    'tags' => 'слайдер',
-    'tpl' => '@FILE:chunks/main/firstScreen.tpl',
-    'sortby' => 'RAND()',
-    'limit' => 1
+{if ('standard'|detector)!=true}
+    {$_modx->runSnippet('!ms2Gallery',[
+        'resources' => 1,
+        'tags' => 'слайдер',
+        'tpl' => '@FILE:chunks/main/firstScreen.tpl',
+        'sortby' => 'RAND()',
+        'limit' => 1,
+        'filetype' => 'image'
     ])}
+{else}
+    {$_modx->runSnippet('!ms2Gallery',[
+        'resources' => 1,
+        'tags' => 'слайдер',
+        'tpl' => '@FILE:chunks/main/firstScreen.tpl',
+        'sortby' => 'RAND()',
+        'limit' => 1
+    ])}
+{/if}
 <div class="welcome__mobile">
     <div class="wrap">
         <div class="welcome__mobile__content">
@@ -137,7 +148,11 @@
                                 <img src="assets/template/images/nav-icon.png" width="32px" height="33px" class="section-tabs__slide__contacts-icon">
                             </div>
                             <div class="section-tabs__slide__contacts-content">
-                                <p class="section-tabs__slide__contacts-text">Построить маршрут до отеля</p>
+                                <p class="section-tabs__slide__contacts-text">
+                                    <a href="#" class="map-trigger" data-modal="map">
+                                            Построить маршрут до отеля
+                                            </a>
+                                </p>
                             </div>
                         </div>
                     </div>

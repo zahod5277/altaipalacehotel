@@ -13,7 +13,7 @@
             <section class="welcome hero-section">
                 <div class="swiper-container swiper-container-horizontal swiper-container-autoheight" style="cursor: -webkit-grab;">
                     <div class="swiper-wrapper">
-                        <div class="hero__item hero__item_video swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-prev" data-swiper-slide-index="0" style="width: 2114px;">
+                        <div class="hero__item hero__item_video swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active swiper-slide-prev" data-swiper-slide-index="0">
                             <video width="auto" height="auto" autoplay="" muted="" loop="">
                                 <source src="{$file.url}" type="video/mp4">
                             </video>

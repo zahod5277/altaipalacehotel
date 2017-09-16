@@ -4,10 +4,14 @@
             {$wrapper}
             <div class="header__mobile__buttons">
                 <div class="header__mobile__button-wrap map-trigger">
-                    <img src="assets/template/images/svg/mobile-marker-map.svg" class="header__mobile__button">
+                    <a href="#" class="header__item map-trigger" data-modal="map">
+                        <img src="assets/template/images/svg/mobile-marker-map.svg" class="header__mobile__button">
+                    </a>
                 </div>
                 <div class="header__mobile__button-wrap tour-trigger">
-                    <img src="assets/template/images/svg/mobile-icon-picture.svg" class="header__mobile__button">
+                    <a data-fancybox="" data-type="iframe" data-src="https://altaipalacehotel.com/vtour/tour.html" href="#">
+                        <img src="assets/template/images/svg/mobile-icon-picture.svg" class="header__mobile__button">
+                    </a>
                 </div>
                 <a href="tel: +7 (963) 512-52-72" class="header__mobile__button-wrap">
                     <img src="assets/template/images/svg/mobile-icon-telephone.svg" class="header__mobile__button">

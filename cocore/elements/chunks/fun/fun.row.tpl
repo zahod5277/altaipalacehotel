@@ -13,7 +13,7 @@
                 {$longtitle}
             </h2>
             <p class="fun-info__description">
-                {$introtext}
+                {$content}
             </p>
             <div class="fun-info__row">
                 {$_modx->runSnippet('ms2Gallery',[

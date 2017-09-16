@@ -15,7 +15,7 @@
             <h3 class="map-contacts__info__title">Добраться к нам легко</h3>
             <p class="map-contacts__info__text">{$_modx->config.adress}</p>
             <p class="map-contacts__info__text">{$_modx->config.coords}</p>
-            <a href="#" class="map-contacts__info__way">Построить маршрут</a>
+            <a href="#" data-modal="map" class="map-trigger map-contacts__info__way">Построить маршрут</a>
             <p class="map-contacts__info__text">Телефон: {$_modx->config.headerNumber}</p>
             <a href="#" class="map-contacts__info__send-mail">Отправить письмо по электронной почте</a>
         </div>
@@ -24,5 +24,5 @@
 {*style="position:relative;height:0;padding-bottom:56.25%"*}
 <div class="contactsVideo">
     {var $video = $_modx->resource.video|fromJSON}
-    <iframe width="100%" height="700" src="{$video.video}" frameborder="0" allowfullscreen width="auto" height="auto"></iframe>
+    <iframe width="100%" height="700" src="{$video.video|replace:'http':'https'}" frameborder="0" allowfullscreen width="auto" height="auto"></iframe>
 </div>

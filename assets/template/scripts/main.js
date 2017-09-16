@@ -3,16 +3,16 @@ var app = {
     isMobile: (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)),
     init: function () {
         if ($('.section-slider-wrap').length) {
-            sliderFront()
+            sliderFront();
         }
         if ($('.accomodation-lux .accomodation-basic-wrap').length) {
-            sliderAccomodations()
+            sliderAccomodations();
         }
         if ($('.accomodation-appartments .accomodation-basic-wrap').length) {
-            sliderAccomodationsTwo()
+            sliderAccomodationsTwo();
         }
         if ($('.section-tabs__slider-swiper .accomodation-basic-wrap').length) {
-            sliderSpecFront()
+            sliderSpecFront();
         }
         $(document).on('scroll', function () {
             if (!this.isMobile) {
@@ -25,7 +25,7 @@ var app = {
             }
         });
         if ($('#mapcontacts').length) {
-            initMapContacts(document.getElementById('mapcontacts'))
+            initMapContacts(document.getElementById('mapcontacts'));
         }
         initMapContacts(document.getElementById('mapcontactsPopup'));
     }
@@ -131,12 +131,12 @@ var events = {
         }).on('click', '.combodate', function (e) {
 
         }).on('click', '.tags-container', function (e) {
-            var X = e.pageX // положения по оси X
-            var Y = e.pageY // положения по оси Y
-            var offset = $('.tags-container').offset()
-            $('.tags-container__overlay .tags-container__content').css({top: Y - offset.top, left: X})
-            $(this).toggleClass('active');
-            if (!$(this).hasClass('active')) {
+            var X = e.pageX; // положения по оси X
+            var Y = e.pageY; // положения по оси Y
+            var offset = $('.tags-container').offset();
+            $('.tags-container__overlay .tags-container__content').css({top: Y - offset.top, left: X});
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
                 TagCanvas.Resume('myCanvas');
             }
         });
@@ -157,7 +157,6 @@ var events = {
                 $('.popup__spec').hide();
             }
         });
-        // $('hot')
         $('.section-breadcrums__item').on('click', function (e) {
             e.preventDefault();
             if ($(this).data('breadcrumb') == 'all') {
@@ -435,10 +434,9 @@ function sliderSpecFront() {
 
 function specOrder() {
     $('.spec-order-btn').on('click', function () {
-        var title = $(this).parents('.spec-item').find('.spec-order-title').html()
-        console.log('title ' + title)
-        $('#specOrder .popup__spec__title').html(title)
-        $('#specOrder input[name="specItem"]').val(title)
+        var title = $(this).parents('.spec-item').find('.spec-order-title').html();
+        $('#specOrder .popup__spec__title').html(title);
+        $('#specOrder input[name="specItem"]').val(title);
     })
 }
 

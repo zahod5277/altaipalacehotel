@@ -15,19 +15,9 @@
             </div>
             <div class="popup__spec__body">
                 <div id="mapcontactsPopup">
-                    <div style="background-image: url(assets/template/images/tour.jpg)" class="c-tour"></div>
+                    <div id="map" style="width: 100%;min-height: 500px;"></div>
+                    <div id="list"></div>
                 </div>
-            </div>
-        </div>
-    </section>
-    <section style="display:none;" class="popup__spec popup__spec_tour" data-modal="tour">
-        <div class="popup__spec__wrap">
-            <div class="popup__spec__header">
-                <h3 class="popup__spec__title">виртуальный тур</h3>
-                <img src="assets/template/images/svg/button-close.svg" class="popup__spec__button-close">
-            </div>
-            <div class="popup__spec__body">
-                <div style="background-image: url(assets/template/images/tour.jpg)" class="c-tour"></div>
             </div>
         </div>
     </section>
@@ -42,7 +32,7 @@
                     <img src="assets/template/images/svg/arrow-nav.svg" class="header__item__icon">
                     <div class="header__item__text">Схема проезда</div>
                 </a>
-                <a href="#" class="header__item tour-trigger" data-modal="tour">
+                <a data-fancybox data-type="iframe" data-src="{$_modx->config.site_url}vtour/tour.html" href="#" class="header__item tour-trigger">
                     <img src="assets/template/images/svg/icon-picture.svg" class="header__item__icon">
                     <div class="header__item__text">Виртуальный тур</div>
                 </a>

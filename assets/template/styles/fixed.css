@@ -1,5 +1,23 @@
+/*Файл с критичными правками на сайте, которые не были слиты в common.css, т.к.
+делались после работы верстальщика*/
 .gallery__button{
     background-color: white;
+}
+
+.section-tabs__slide__contacts-text a{
+    color:white;
+}
+
+section.popup__spec{
+    align-items: start;
+}
+
+section.popup__spec .popup__spec__wrap{
+    margin-top: 30px;
+}
+
+.c-rating_0 svg{
+    fill:none;
 }
 
 .section-tabs-bullet_active{
@@ -177,12 +195,37 @@ section.accomodation-basic{
     margin-bottom: 20px;
 }
 
+section.welcome .wrap .welcome__content h1.welcome__title:after{
+    left: 42%;
+}
+
+.fun-info__article h2,.fun-info__article h3{
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 20px;
+}
+
+.fun-info__article h4{
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.fun-info__article p{
+    font-size: 16px;
+    color: #000;
+    line-height: 22px;
+    margin: 15px 0px;
+}
+
 @media(orientation: portrait) and (max-width:680px){
     .section-tabs__items .section-tabs__item .section-tabs__item__wrap{
         height: 540px;
     }
     section.section-tabs .section-tabs__slider{
-           height: 542px; 
+        height: 542px; 
     }
 }
 
@@ -198,81 +241,81 @@ section.accomodation-basic{
         position: relative;
         top: 50px;
     }
-    
+
     .popup__booking stickyBooking popup__booking_open{
         height: 340px; 
     }
-    
+
     section.popup__booking .popup__booking_wrap{
         justify-content: flex-end; 
     }
-    
+
     .section-slider__no-margin-top{
         margin-top:-10px!important;
     }
-    
+
     #map{
         height: 100vh!important;
     }
-    
+
     #map>ymaps{
         height: 115vh!important;
     }
-    
+
     .section-breadcrums__item{
         font-size: 18px!important;
     }
-    
+
     section.popup__booking{
         height: 278px;
     }
-    
+
     .no-border-bottom{
         border-bottom: 1px solid transparent!important;
     }
-    
+
     .two-column__item{
         margin-right: 15px;
     }
-    
+
     .welcome__info{
         margin-bottom: 20px;
         margin-top: 0px;
     }
-    
+
     .tags-container{
         background: #000;
     }
-    
+
     .gallery__col_text ul{
         -webkit-column-count: 1;
         -moz-column-count: 1;
         column-count: 1;
     }
-    
+
     .gallery__col_text{
         min-height:250px; 
     }
-    
+
     .gallery__row_large{
-       height: 540px;
+        height: 540px;
     }
-    
+
     .gallery__col_text ul li{
         padding-left: 20px;
         position: relative;
         font-size: 14px;
         line-height: 27px;
     }
-    
+
     section.section-tabs .section-tabs-pagination .section-tabs-bullet{
         background-color: rgba(0,0,0,1);
     }
-    
+
     section.section-tabs .section-tabs-pagination .section-tabs-bullet:nth-child(odd){
         background-color: #000;
     }
-    
+
     header.header{
         border-bottom: 1px solid transparent;
     }
@@ -285,55 +328,55 @@ section.accomodation-basic{
     .m-block__price{
         text-align: right;
     }
-    
+
     .m-block__price{
         min-width: 75px;
     }
-    
+
     .c-form__input{
         width: 100%!important;
     }
-    
+
     .c-form__input_button{
         position: relative;
         top: 15px;
     }
-    
+
     .fun-info__title{
-       min-width: 300px;
-       text-align: center;
+        min-width: 300px;
+        text-align: center;
     }
-    
+
     .accomodation-basic__price__button{
         width: 125px!important;
         font-size: 12px!important;
     }
-    
+
     .accomodation-basic__price__text{
         font-size: 12px!important;
     }
-    
+
     .accomodation-welcome__title__stars{
         display: inline-block;
     }
-  
+
     .welcome__info .wrap .welcome__info__text{
         font-size: 16px;
     }
-    
+
     section.contacts-welcome .contacts-welcome__image{
         height: 264px;
     }
-    
+
     .full-width{
         height: 264px;
         min-height: 264px;
     }
-    
+
     .filter-light{
         height: 180px;
     }   
-    
+
 }
 
 
@@ -342,9 +385,13 @@ section.accomodation-basic{
         float:left;
         width: 33.3%;
     }
-    
+
     .tags-container{
         display: block!important;
+    }
+    
+    .hero-section video {
+        min-width: 100%;
     }
 }
 
@@ -381,40 +428,40 @@ section.accomodation-basic{
     .m-block__desc{
         min-width: 480px
     }
-    
+
     .tags-container{
         display: none;
     }
-    
+
 }
 
 @media(min-width:968px) and (max-width:1024px){
     section.contacts-welcome .contacts-welcome__image{
         height: 350px;
     }
-    
+
     .full-width{
         height: 350px;
         min-height: 350px;
     }
-    
+
     .section-tabs__items .section-tabs__item .section-tabs__item__wrap .section-tabs__item__content .section-tabs__item__button-wrap{
         position: relative;
         top: 30px;
     }
-    
+
     .m-block__desc{
         min-width: 365px;
     }
-    
+
     .mobile-show{
         display: none;
     }
-    
+
     .tags-container{
         display: none;
     }
-        
+
     .welcome__info{
         margin-bottom: 20px;
         margin-top: 0px;
@@ -446,7 +493,7 @@ section.accomodation-basic{
     .section-breadcrums__item{
         font-size: 10px!important;
     }
-    
+
     section.popup__booking{
         height: 340px;
     }

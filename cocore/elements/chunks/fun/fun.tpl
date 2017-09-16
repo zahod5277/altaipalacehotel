@@ -8,6 +8,7 @@
         'includeTVs' => 'ico,funIco',
         'includeThumbs' => 'small,wide',
         'includeOriginal' => 1,
+        'includeContent' => 1,
         'showLog' => 0,
         'tpl' => '@FILE:chunks/fun/fun.row.tpl'
     ])}
@@ -56,9 +57,9 @@
     </div>
     <div class="tags-container__overlay">
         <div class="tags-container__content">
-            <div class="tags-container__title">Озеро Манжерок</div>
-            <div class="tags-container__article">Бывает ли тур по Алтаю без экстрима и палаток? Да! Отправляйтесь в недельное путешествие по знаковым местам Алтая с ночёвкой на турбазах и этнографических стоянках. Однозначно лучший тур для первого раза на Алтае.
-                <div class="tags-container__bottom">Для начинающих</div>
+            <div class="tags-container__title"></div>
+            <div class="tags-container__article">
+                <div class="tags-container__bottom"></div>
             </div>
         </div>
     </div>

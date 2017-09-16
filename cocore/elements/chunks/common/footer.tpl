@@ -34,7 +34,7 @@
                     <img src="assets/template/images/svg/logo-autor.svg" class="footer__autor__image">
                     <div class="footer__autor__wrap">
                         <p class="footer__autor__text">Сделано в Эйфории</p>
-                        <a href="https://arteuphoria.ru/" rel="nofollow" class="footer__autor__link">Информация о сайте</a>
+                        <a href="http://arteuphoria.ru/our-works/altai-palace-hotel" rel="nofollow" class="footer__autor__link">Информация о сайте</a>
                         <div class="footer__autor__date">2017</div>
                     </div>
                 </div>
