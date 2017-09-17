@@ -30,5 +30,17 @@
                 </div>
             </section>
         {/if}
+        {if ('standard'|detector)!=true}
+        <div class="welcome__mobile">
+            <div class="wrap">
+                <div class="welcome__mobile__content">
+                    <h1 class="welcome__title">{$file.name}</h1>
+                    <p class="welcome__text">
+                         {$file.description}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {/if}
     {/foreach}
 {/if}

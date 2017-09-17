@@ -16,15 +16,6 @@
         'limit' => 1
     ])}
 {/if}
-<div class="welcome__mobile">
-    <div class="wrap">
-        <div class="welcome__mobile__content">
-            <h1 class="welcome__title">Арт-отель</h1>
-            <p class="welcome__text">Окруженный со всех сторон горами и холмами, их легендами и памятью об исторических событиях – наш отель является оазисом покоя и уюта. Праздник культуры начнется здесь, в роскошном интерьере, а наш ресторан поразит гостей самобытной кухней и круглосуточным
-                обслуживанием, что является диковинкой в этих далеких местах.</p>
-        </div>
-    </div>
-</div>
 <div class="welcome__info">
     <div class="wrap">
         <img src="assets/template/images/svg/icon-dish.svg" class="welcome__info__icon">
