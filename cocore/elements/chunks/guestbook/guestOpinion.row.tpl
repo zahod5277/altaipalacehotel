@@ -13,7 +13,23 @@
                 </div>
                 <div class="c-opinion__item">
                     <div>Останавливался у нас:</div>
-                    <div style="display:block">{$_pls['tv.incomingDate']}</div>
+                    {var $months = [
+                       '01' => 'января',
+                       '02' => 'февраля',
+                       '03' => 'марта',
+                       '04' => 'апреля',
+                       '05' => 'мая',
+                       '06' => 'июня',
+                       '07' => 'июля',
+                       '08' => 'августа',
+                       '09' => 'сентября',
+                       '10' => 'октября',
+                       '11' => 'ноября',
+                       '12' => 'декабря',
+                    ]}
+                    {var $rawDate = $_pls['tv.incomingDate']|split:'.'}
+                    {var $month = $rawDate[1]|replace:$rawDate[1]:$months[$rawDate[1]]}
+                    <div style="display:block">{$rawDate[0]~' '~$month~' '~$rawDate[2]~' г.'}</div>
                 </div>
                 <div class="c-opinion__item">
                     {$_modx->runSnippet('@FILE:snippets/getGuestAverageMark.php',[

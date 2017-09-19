@@ -5,7 +5,7 @@ $pages = $modx->getIterator('modResource', [
     'parent' => 7,
     'template:=' => 12,
     'published:=' => 1,
-    'deletetd:=' => 1
+    'deleted:=' => 0
         ]);
 $i = 0;
 

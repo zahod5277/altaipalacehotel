@@ -136,7 +136,9 @@ var events = {
             var offset = $('.tags-container').offset();
             $('.tags-container__overlay .tags-container__content').css({top: Y - offset.top, left: X});
             if ($(this).hasClass('active')) {
+                $('.tags-container__content',this).hide();
                 $(this).removeClass('active');
+                $('.tags-container__content',this).css({display:'block'});
                 TagCanvas.Resume('myCanvas');
             }
         });
@@ -459,6 +461,12 @@ if (jQuery.datetimepicker) {
     $('#datepicker').datetimepicker({
         timepicker: false,
         format: 'd F'
+    })
+    $('#guestDatepicker').datetimepicker({
+        timepicker: false,
+        format: 'd.m.Y',
+        yearStart: '2013',
+        yearEnd: '2022'
     })
     $('#timepicker').datetimepicker({
         datepicker: false,

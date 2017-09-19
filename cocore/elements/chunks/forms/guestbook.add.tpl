@@ -2,7 +2,7 @@
     <form class="popup__spec__form ajax_form" method="POST" action="{$_modx->resource.id|url}">
         <div class="popup__spec__form-wrap">
             <input type="text" name="guestName" placeholder="Ваше имя" class="popup__spec__input">
-            <input type="text" name="incomingDate" placeholder="Дата заезда" class="popup__spec__input">
+            <input type="text" name="incomingDate" id="guestDatepicker" placeholder="Дата заезда" class="popup__spec__input">
         </div>
         <div class="popup__spec__form-wrap">
             <input type="text" name="contactNumber" placeholder="Контактный номер" class="popup__spec__input">

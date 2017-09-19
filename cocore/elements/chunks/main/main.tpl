@@ -103,7 +103,7 @@
                 <div class="section-tabs__slide__video">
                     <div style="position:relative;height:0;padding-bottom:56.25%" class="section-tabs__slide__video-wrap">
                         {var $video = $_modx->resource.video|fromJSON}
-                        <iframe width="100%" height="365" src="{$video.video}" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen="" async=""></iframe>}
+                        <iframe width="100%" height="365" src="{$video.video|replace:'http':'https'}" width="640" height="360" frameborder="0" style="position:absolute;width:100%;height:100%;left:0" allowfullscreen="" async=""></iframe>}
                     </div>
                 </div>
                 <div class="section-tabs__slide__right">
