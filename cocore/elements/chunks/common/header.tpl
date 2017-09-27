@@ -32,7 +32,7 @@
                     <img src="assets/template/images/svg/arrow-nav.svg" class="header__item__icon">
                     <div class="header__item__text">Схема проезда</div>
                 </a>
-                <a data-fancybox data-type="iframe" data-src="{$_modx->config.site_url}vtour/tour.html" href="#" class="header__item tour-trigger">
+                <a data-fancybox data-type="iframe" data-src="{$_modx->config.site_url}3D/vtour/tour.html" href="#" class="header__item tour-trigger">
                     <img src="assets/template/images/svg/icon-picture.svg" class="header__item__icon">
                     <div class="header__item__text">Виртуальный тур</div>
                 </a>

@@ -9,7 +9,7 @@
                     </a>
                 </div>
                 <div class="header__mobile__button-wrap tour-trigger">
-                    <a data-fancybox="" data-type="iframe" data-src="https://altaipalacehotel.com/vtour/tour.html" href="#">
+                    <a data-fancybox data-type="iframe" data-src="{$_modx->config.site_url}3D/vtour/tour.html" href="#">
                         <img src="assets/template/images/svg/mobile-icon-picture.svg" class="header__mobile__button">
                     </a>
                 </div>
